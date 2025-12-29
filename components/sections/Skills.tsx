@@ -24,7 +24,7 @@ const skillCategories = [
             "Model Deployment",
             "MLOps"
         ],
-        color: "from-blue-500 to-cyan-500"
+        theme: "primary"
     },
     {
         title: "Frontend Development",
@@ -37,7 +37,7 @@ const skillCategories = [
             "Responsive Design",
             "State Management"
         ],
-        color: "from-purple-500 to-pink-500"
+        theme: "secondary"
     },
     {
         title: "Backend Development",
@@ -50,7 +50,7 @@ const skillCategories = [
             "Microservices",
             "WebSockets"
         ],
-        color: "from-green-500 to-emerald-500"
+        theme: "muted"
     },
     {
         title: "Database & Storage",
@@ -63,7 +63,7 @@ const skillCategories = [
             "Query Optimization",
             "Data Modeling"
         ],
-        color: "from-orange-500 to-red-500"
+        theme: "primary"
     },
     {
         title: "Cloud & DevOps",
@@ -76,7 +76,7 @@ const skillCategories = [
             "Infrastructure as Code",
             "Monitoring"
         ],
-        color: "from-indigo-500 to-blue-500"
+        theme: "secondary"
     },
     {
         title: "Security",
@@ -89,7 +89,7 @@ const skillCategories = [
             "Access Control",
             "Penetration Testing"
         ],
-        color: "from-red-500 to-rose-500"
+        theme: "muted"
     },
     {
         title: "Programming Languages",
@@ -102,7 +102,7 @@ const skillCategories = [
             "Bash",
             "Java"
         ],
-        color: "from-yellow-500 to-amber-500"
+        theme: "primary"
     },
     {
         title: "Hardware & IoT",
@@ -115,7 +115,7 @@ const skillCategories = [
             "Circuit Design",
             "Sensor Integration"
         ],
-        color: "from-teal-500 to-cyan-500"
+        theme: "secondary"
     }
 ];
 
@@ -131,10 +131,10 @@ export function Skills() {
     };
 
     const itemVariants = {
-        hidden: { opacity: 0, scale: 0.8 },
+        hidden: { opacity: 0, y: 20 },
         visible: {
             opacity: 1,
-            scale: 1,
+            y: 0,
             transition: {
                 duration: 0.5,
             },
@@ -142,7 +142,7 @@ export function Skills() {
     };
 
     return (
-        <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8 bg-black/40">
             <div className="max-w-7xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -152,10 +152,10 @@ export function Skills() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-                        Technical <span className="gradient-text">Skills</span>
+                        Technical <span className="gradient-text">Expertise</span>
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        A comprehensive toolkit for building intelligent, scalable, and secure applications
+                        A specialized toolkit for developing intelligent, scalable, and secure engineering solutions.
                     </p>
                 </motion.div>
 
@@ -164,7 +164,7 @@ export function Skills() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
                 >
                     {skillCategories.map((category, index) => {
                         const Icon = category.icon;
@@ -174,24 +174,23 @@ export function Skills() {
                                 variants={itemVariants}
                                 className="group"
                             >
-                                <div className="h-full p-6 rounded-lg border bg-card hover:shadow-xl transition-all duration-300 hover:scale-105">
-                                    <div className="flex items-center gap-3 mb-4">
-                                        <div className={`p-2 rounded-lg bg-gradient-to-br ${category.color} text-white`}>
+                                <div className="h-full p-8 rounded-2xl border border-white/5 bg-gradient-to-b from-white/[0.08] to-transparent hover:border-primary/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(25,35,45,0.1)]">
+                                    <div className="flex items-center gap-4 mb-6">
+                                        <div className="p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                                             <Icon className="h-6 w-6" />
                                         </div>
-                                        <h3 className="font-semibold text-lg">{category.title}</h3>
+                                        <h3 className="font-bold text-xl tracking-tight">{category.title}</h3>
                                     </div>
-                                    <ul className="space-y-2">
+                                    <div className="flex flex-wrap gap-2">
                                         {category.skills.map((skill, skillIndex) => (
-                                            <li
+                                            <span
                                                 key={skillIndex}
-                                                className="text-sm text-muted-foreground flex items-center gap-2"
+                                                className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-muted-foreground group-hover:text-foreground group-hover:border-primary/20 transition-all duration-300"
                                             >
-                                                <span className="w-1.5 h-1.5 rounded-full bg-primary" />
                                                 {skill}
-                                            </li>
+                                            </span>
                                         ))}
-                                    </ul>
+                                    </div>
                                 </div>
                             </motion.div>
                         );

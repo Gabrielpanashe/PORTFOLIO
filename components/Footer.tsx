@@ -5,22 +5,17 @@ import { Github, Linkedin, Mail, Twitter, Heart } from "lucide-react";
 const socialLinks = [
     {
         icon: Github,
-        href: "https://github.com/yourusername",
+        href: "https://github.com/Gabrielpanashe",
         label: "GitHub",
     },
     {
         icon: Linkedin,
-        href: "https://linkedin.com/in/yourusername",
+        href: "https://linkedin.com/in/gabriel-panashe",
         label: "LinkedIn",
     },
     {
-        icon: Twitter,
-        href: "https://twitter.com/yourusername",
-        label: "Twitter",
-    },
-    {
         icon: Mail,
-        href: "mailto:your.email@example.com",
+        href: "mailto:panashechandiwana11@gmail.com",
         label: "Email",
     },
 ];
@@ -107,7 +102,7 @@ export function Footer() {
                 <div className="pt-8 border-t border-border">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                         <p className="text-sm text-muted-foreground">
-                            © {currentYear} Your Name. All rights reserved.
+                            © {currentYear} Gabriel Panashe Chandiwana. All rights reserved.
                         </p>
                         <p className="text-sm text-muted-foreground flex items-center gap-1">
                             Made with <Heart className="h-4 w-4 text-red-500 fill-red-500" /> using

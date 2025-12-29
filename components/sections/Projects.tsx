@@ -4,53 +4,54 @@ import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink, Code2 } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 const projects = [
     {
         title: "AI-Powered Face Recognition System",
-        description: "Biometric authentication system with liveness detection and anti-spoofing capabilities using deep learning models.",
+        description: "Biometric authentication system with liveness detection and anti-spoofing capabilities using deep learning models. Features real-time processing and secure embedding storage.",
         tags: ["Python", "TensorFlow", "React", "FastAPI", "Computer Vision"],
-        github: "https://github.com/yourusername/face-recognition",
+        github: "https://github.com/Gabrielpanashe/face-access-system",
         demo: "https://demo.example.com",
         category: "AI/ML",
     },
     {
         title: "Full-Stack E-Commerce Platform",
-        description: "Scalable e-commerce solution with real-time inventory management, payment integration, and admin dashboard.",
+        description: "Scalable e-commerce solution with real-time inventory management, payment integration, and admin dashboard. Built with security and performance in mind.",
         tags: ["Next.js", "TypeScript", "PostgreSQL", "Stripe", "Tailwind CSS"],
-        github: "https://github.com/yourusername/ecommerce",
+        github: "https://github.com/Gabrielpanashe/ecommerce",
         demo: "https://demo.example.com",
         category: "Full-Stack",
     },
     {
         title: "Security-Aware Chat Application",
-        description: "End-to-end encrypted messaging platform with JWT authentication and role-based access control.",
+        description: "End-to-end encrypted messaging platform with JWT authentication and role-based access control. Implements secure WebSocket communication.",
         tags: ["Node.js", "Socket.io", "MongoDB", "React", "Encryption"],
-        github: "https://github.com/yourusername/secure-chat",
+        github: "https://github.com/Gabrielpanashe/secure-chat",
         demo: "https://demo.example.com",
         category: "Security",
     },
     {
-        title: "Machine Learning Model Deployment Pipeline",
-        description: "Automated ML pipeline for model training, versioning, and deployment with monitoring and A/B testing.",
+        title: "Machine Learning Model Pipeline",
+        description: "Automated ML pipeline for model training, versioning, and deployment with monitoring and A/B testing capabilities.",
         tags: ["Python", "Docker", "Kubernetes", "MLflow", "FastAPI"],
-        github: "https://github.com/yourusername/ml-pipeline",
+        github: "https://github.com/Gabrielpanashe/ml-pipeline",
         demo: "https://demo.example.com",
         category: "AI/ML",
     },
     {
         title: "Real-Time Data Analytics Dashboard",
-        description: "Interactive dashboard for visualizing large-scale data streams with real-time updates and predictive analytics.",
+        description: "Interactive dashboard for visualizing large-scale data streams with real-time updates and predictive analytics integration.",
         tags: ["React", "D3.js", "Apache Kafka", "Python", "Redis"],
-        github: "https://github.com/yourusername/analytics-dashboard",
+        github: "https://github.com/Gabrielpanashe/analytics-dashboard",
         demo: "https://demo.example.com",
         category: "Full-Stack",
     },
     {
         title: "IoT Smart Home Automation",
-        description: "IoT platform for controlling and monitoring smart home devices with voice commands and mobile app integration.",
+        description: "IoT platform for controlling and monitoring smart home devices with voice commands and mobile app integration using MQTT.",
         tags: ["Raspberry Pi", "MQTT", "React Native", "Firebase", "Arduino"],
-        github: "https://github.com/yourusername/smart-home",
+        github: "https://github.com/Gabrielpanashe/smart-home",
         demo: "https://demo.example.com",
         category: "IoT",
     },
@@ -79,7 +80,7 @@ export function Projects() {
     };
 
     return (
-        <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
+        <section id="projects" className="py-24 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -92,8 +93,8 @@ export function Projects() {
                         Featured <span className="gradient-text">Projects</span>
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        A selection of projects demonstrating my expertise in AI development,
-                        full-stack engineering, and security-aware system design
+                        A selection of engineering projects demonstrating my expertise in AI development,
+                        full-stack systems, and secure application design.
                     </p>
                 </motion.div>
 
@@ -102,58 +103,59 @@ export function Projects() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                 >
                     {projects.map((project, index) => (
                         <motion.div key={index} variants={itemVariants}>
-                            <Card className="h-full flex flex-col group">
-                                <CardHeader>
-                                    <div className="flex items-start justify-between mb-2">
-                                        <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                            <Card className="h-full flex flex-col group bg-card transition-all duration-500 hover:border-primary/50 hover:shadow-[0_0_40px_rgba(25,35,45,0.1)] border-white/5 overflow-hidden">
+                                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                <CardHeader className="relative">
+                                    <div className="flex items-start justify-between mb-4">
+                                        <div className="p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                                             <Code2 className="h-6 w-6" />
                                         </div>
-                                        <span className="text-xs px-2 py-1 rounded-full bg-secondary/20 text-secondary">
+                                        <Badge variant="secondary" className="bg-white/5 text-muted-foreground border-white/10 px-3">
                                             {project.category}
-                                        </span>
+                                        </Badge>
                                     </div>
-                                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                                    <CardTitle className="text-2xl font-bold mb-2 tracking-tight group-hover:text-primary transition-colors">
                                         {project.title}
                                     </CardTitle>
-                                    <CardDescription className="line-clamp-3">
+                                    <CardDescription className="text-muted-foreground leading-relaxed line-clamp-3">
                                         {project.description}
                                     </CardDescription>
                                 </CardHeader>
-                                <CardContent className="flex-grow">
+                                <CardContent className="flex-grow relative">
                                     <div className="flex flex-wrap gap-2">
                                         {project.tags.map((tag, tagIndex) => (
                                             <span
                                                 key={tagIndex}
-                                                className="text-xs px-2 py-1 rounded-md bg-muted text-muted-foreground"
+                                                className="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded bg-muted/50 text-muted-foreground border border-white/5"
                                             >
                                                 {tag}
                                             </span>
                                         ))}
                                     </div>
                                 </CardContent>
-                                <CardFooter className="gap-2">
-                                    <Button variant="outline" size="sm" className="flex-1" asChild>
+                                <CardFooter className="gap-3 relative">
+                                    <Button variant="outline" size="sm" className="flex-1 bg-white/5 border-white/10 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300" asChild>
                                         <a
                                             href={project.github}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
                                             <Github className="mr-2 h-4 w-4" />
-                                            Code
+                                            Source
                                         </a>
                                     </Button>
-                                    <Button size="sm" className="flex-1" asChild>
+                                    <Button size="sm" className="flex-1 shadow-lg shadow-primary/20" asChild>
                                         <a
                                             href={project.demo}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
                                             <ExternalLink className="mr-2 h-4 w-4" />
-                                            Demo
+                                            Live Demo
                                         </a>
                                     </Button>
                                 </CardFooter>

@@ -49,7 +49,7 @@ export function Hero() {
                     className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight"
                 >
                     <span className="block">Hi, I&apos;m</span>
-                    <span className="block gradient-text">Your Name</span>
+                    <span className="block gradient-text">Gabriel Panashe</span>
                 </motion.h1>
 
                 <motion.p
@@ -64,20 +64,24 @@ export function Hero() {
                     className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto"
                 >
                     AI Developer & Full-Stack Engineer building intelligent systems and
-                    security-aware platforms
+                    security-aware platforms. Currently pursuing a B.Sc. in Computer Engineering.
                 </motion.p>
 
                 <motion.div
                     variants={itemVariants}
                     className="flex flex-wrap items-center justify-center gap-4 mb-12"
                 >
-                    <Button size="lg" className="group">
-                        <Mail className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
-                        Get in Touch
+                    <Button size="lg" className="group" asChild>
+                        <a href="mailto:panashechandiwana11@gmail.com">
+                            <Mail className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
+                            Get in Touch
+                        </a>
                     </Button>
-                    <Button size="lg" variant="outline" className="group">
-                        View Projects
-                        <ArrowDown className="ml-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
+                    <Button size="lg" variant="outline" className="group" asChild>
+                        <a href="#projects">
+                            View Projects
+                            <ArrowDown className="ml-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
+                        </a>
                     </Button>
                 </motion.div>
 
@@ -86,7 +90,7 @@ export function Hero() {
                     className="flex items-center justify-center gap-6"
                 >
                     <a
-                        href="https://github.com/yourusername"
+                        href="https://github.com/Gabrielpanashe"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-primary transition-colors hover:scale-110 transform duration-200"
@@ -95,7 +99,7 @@ export function Hero() {
                         <Github className="h-6 w-6" />
                     </a>
                     <a
-                        href="https://linkedin.com/in/yourusername"
+                        href="https://linkedin.com/in/gabriel-panashe"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-primary transition-colors hover:scale-110 transform duration-200"
@@ -104,7 +108,7 @@ export function Hero() {
                         <Linkedin className="h-6 w-6" />
                     </a>
                     <a
-                        href="mailto:your.email@example.com"
+                        href="mailto:panashechandiwana11@gmail.com"
                         className="text-muted-foreground hover:text-primary transition-colors hover:scale-110 transform duration-200"
                         aria-label="Email Contact"
                     >

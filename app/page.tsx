@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Navigation />
-      <main className="mx-auto w-full max-w-3xl space-y-20 py-16 px-6">
+      <main className="w-full space-y-24 py-16">
         <Hero />
         <About />
         <Projects />

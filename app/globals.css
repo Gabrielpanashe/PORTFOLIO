@@ -16,12 +16,12 @@
     --popover: 0 0% 8%;
     --popover-foreground: 0 0% 98%;
 
-    /* Primary - Blue Accent */
-    --primary: 217 91% 60%;
+    /* Primary - Coffee/Brown Accent */
+    --primary: 25 35% 45%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Coffee/Brown */
-    --secondary: 25 35% 45%;
+    /* Secondary - Muted Coffee */
+    --secondary: 30 15% 25%;
     --secondary-foreground: 0 0% 100%;
 
     /* Muted Colors */
@@ -39,7 +39,7 @@
     /* Border & Input */
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 217 91% 60%;
+    --ring: 25 35% 45%;
 
     /* Radius */
     --radius: 0.5rem;
@@ -63,10 +63,21 @@
 }
 
 @layer utilities {
-  .border-border { border-color: hsl(var(--border)); }
-  .border-input { border-color: hsl(var(--input)); }
-  .bg-background { background-color: hsl(var(--background)); }
-  .text-foreground { color: hsl(var(--foreground)); }
+  .border-border {
+    border-color: hsl(var(--border));
+  }
+
+  .border-input {
+    border-color: hsl(var(--input));
+  }
+
+  .bg-background {
+    background-color: hsl(var(--background));
+  }
+
+  .text-foreground {
+    color: hsl(var(--foreground));
+  }
 }
 
 /* Custom Scrollbar */

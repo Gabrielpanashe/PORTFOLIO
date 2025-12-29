@@ -79,41 +79,46 @@ export function About() {
                     </p>
                 </motion.div>
 
-                {/* Timeline (simplified, responsive) */}
-                <div>
-                    <div className="space-y-8">
+                <div className="max-w-4xl mx-auto mt-12">
+                    <div className="relative border-l-2 border-primary/30 pl-8 space-y-12">
                         {timeline.map((item, index) => {
                             const Icon = item.icon;
 
                             return (
                                 <motion.div
                                     key={index}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ duration: 0.6, delay: index * 0.08 }}
-                                    className="flex items-start gap-6"
+                                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                                    className="relative"
                                 >
-                                    {/* Icon */}
-                                    <div className="flex-shrink-0">
-                                        <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center border-4 border-background">
-                                            <Icon className="h-5 w-5 text-primary-foreground" />
-                                        </div>
+                                    {/* Timeline Dot */}
+                                    <div className="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-background border-4 border-primary shadow-[0_0_10px_rgba(25,35,45,0.5)]" />
+
+                                    {/* Icon Box */}
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold mb-4 border border-primary/20 uppercase tracking-wider">
+                                        <Icon className="h-3.5 w-3.5" />
+                                        {item.type}
                                     </div>
 
-                                    {/* Content */}
-                                    <div className="flex-1">
-                                        <span className="text-sm text-primary font-medium">{item.period}</span>
-                                        <h3 className="text-xl font-bold mt-2 mb-1">{item.title}</h3>
-                                        <p className="text-muted-foreground font-medium mb-3">{item.organization}</p>
-                                        <p className="text-sm text-muted-foreground mb-4">{item.description}</p>
-                                        <ul className="list-inside list-disc space-y-2">
-                                            {item.achievements.map((achievement, achIndex) => (
-                                                <li key={achIndex} className="text-sm text-muted-foreground">
+                                    <div className="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
+                                        <h3 className="text-2xl font-bold">{item.title}</h3>
+                                        <span className="text-sm text-primary font-medium md:ml-auto whitespace-nowrap">{item.period}</span>
+                                    </div>
+
+                                    <p className="text-lg text-muted-foreground font-medium mb-3">{item.organization}</p>
+                                    <p className="text-muted-foreground mb-4 leading-relaxed">{item.description}</p>
+
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                                        {item.achievements.map((achievement, achIndex) => (
+                                            <div key={achIndex} className="flex items-center gap-2 group">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
+                                                <span className="text-sm text-muted-foreground">
                                                     {achievement}
-                                                </li>
-                                            ))}
-                                        </ul>
+                                                </span>
+                                            </div>
+                                        ))}
                                     </div>
                                 </motion.div>
                             );

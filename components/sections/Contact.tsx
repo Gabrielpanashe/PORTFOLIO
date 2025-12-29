@@ -8,44 +8,37 @@ const contactMethods = [
     {
         icon: Mail,
         label: "Email",
-        value: "your.email@example.com",
-        href: "mailto:your.email@example.com",
-        color: "from-blue-500 to-cyan-500"
+        value: "panashechandiwana11@gmail.com",
+        href: "mailto:panashechandiwana11@gmail.com",
+        color: "primary"
     },
     {
         icon: Github,
         label: "GitHub",
-        value: "@yourusername",
-        href: "https://github.com/yourusername",
-        color: "from-gray-500 to-gray-700"
+        value: "@Gabrielpanashe",
+        href: "https://github.com/Gabrielpanashe",
+        color: "secondary"
     },
     {
         icon: Linkedin,
         label: "LinkedIn",
-        value: "Your Name",
-        href: "https://linkedin.com/in/yourusername",
-        color: "from-blue-600 to-blue-800"
-    },
-    {
-        icon: Twitter,
-        label: "Twitter",
-        value: "@yourusername",
-        href: "https://twitter.com/yourusername",
-        color: "from-sky-400 to-blue-500"
+        value: "Gabriel Panashe",
+        href: "https://linkedin.com/in/gabriel-panashe",
+        color: "primary"
     },
     {
         icon: MapPin,
         label: "Location",
-        value: "Your City, Country",
+        value: "Chinhoyi, Zimbabwe",
         href: null,
-        color: "from-red-500 to-pink-500"
+        color: "secondary"
     },
     {
         icon: Phone,
         label: "Phone",
-        value: "+1 (123) 456-7890",
-        href: "tel:+11234567890",
-        color: "from-green-500 to-emerald-500"
+        value: "+263 777 000 000",
+        href: "tel:+263777000000",
+        color: "primary"
     }
 ];
 
@@ -95,20 +88,20 @@ export function Contact() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
                 >
                     {contactMethods.map((method, index) => {
                         const Icon = method.icon;
                         const content = (
                             <motion.div
                                 variants={itemVariants}
-                                className="group p-6 rounded-lg border bg-card hover:shadow-xl transition-all duration-300 hover:scale-105"
+                                className="group p-8 rounded-2xl border border-white/5 bg-white/[0.03] hover:border-primary/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(25,35,45,0.1)]"
                             >
-                                <div className={`inline-flex p-3 rounded-lg bg-gradient-to-br ${method.color} text-white mb-4`}>
+                                <div className="inline-flex p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 mb-6">
                                     <Icon className="h-6 w-6" />
                                 </div>
-                                <h3 className="font-semibold text-lg mb-1">{method.label}</h3>
-                                <p className="text-sm text-muted-foreground group-hover:text-primary transition-colors">
+                                <h3 className="font-bold text-xl mb-2">{method.label}</h3>
+                                <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors break-all">
                                     {method.value}
                                 </p>
                             </motion.div>
@@ -137,8 +130,8 @@ export function Contact() {
                     transition={{ duration: 0.6, delay: 0.3 }}
                     className="text-center"
                 >
-                    <Button size="lg" className="group" asChild>
-                        <a href="mailto:your.email@example.com">
+                    <Button size="lg" className="group shadow-xl shadow-primary/20" asChild>
+                        <a href="mailto:panashechandiwana11@gmail.com">
                             <Mail className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
                             Send me an email
                         </a>
