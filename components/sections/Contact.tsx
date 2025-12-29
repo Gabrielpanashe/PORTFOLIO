@@ -65,24 +65,8 @@ export function Contact() {
     };
 
     return (
-        <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-            <div className="max-w-5xl mx-auto">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
-                >
-                    <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-                        Get in <span className="gradient-text">Touch</span>
-                    </h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        I&apos;m always open to discussing new projects, creative ideas, or opportunities
-                        to be part of your vision. Feel free to reach out!
-                    </p>
-                </motion.div>
-
+        <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 mb-20">
+            <div className="max-w-7xl mx-auto">
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"

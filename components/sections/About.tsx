@@ -60,24 +60,9 @@ const timeline = [
 
 export function About() {
     return (
-        <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
+        <section id="about" className="py-24 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
-                >
-                    <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-                        About <span className="gradient-text">Me</span>
-                    </h2>
-                    <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
-                        I&apos;m a passionate Computer Engineering student with a strong focus on AI development
-                        and full-stack engineering. I love building intelligent systems that solve real-world
-                        problems and create meaningful impact.
-                    </p>
-                </motion.div>
+                {/* Timeline */}
 
                 <div className="max-w-4xl mx-auto mt-12">
                     <div className="relative border-l-2 border-primary/30 pl-8 space-y-12">
@@ -110,11 +95,11 @@ export function About() {
                                     <p className="text-lg text-muted-foreground font-medium mb-3">{item.organization}</p>
                                     <p className="text-muted-foreground mb-4 leading-relaxed">{item.description}</p>
 
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
                                         {item.achievements.map((achievement, achIndex) => (
-                                            <div key={achIndex} className="flex items-center gap-2 group">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
-                                                <span className="text-sm text-muted-foreground">
+                                            <div key={achIndex} className="flex items-start gap-3 p-3 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-primary/20 transition-all group/item">
+                                                <div className="mt-1 w-1.5 h-1.5 rounded-full bg-primary/40 group-hover/item:bg-primary transition-colors shrink-0" />
+                                                <span className="text-sm text-muted-foreground group-hover/item:text-white transition-colors">
                                                     {achievement}
                                                 </span>
                                             </div>

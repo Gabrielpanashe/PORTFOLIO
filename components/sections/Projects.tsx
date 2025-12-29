@@ -8,11 +8,20 @@ import { Badge } from "@/components/ui/badge";
 
 const projects = [
     {
-        title: "AI-Powered Face Recognition System",
+        title: "AI Face Powered System",
         description: "Biometric authentication system with liveness detection and anti-spoofing capabilities using deep learning models. Features real-time processing and secure embedding storage.",
         tags: ["Python", "TensorFlow", "React", "FastAPI", "Computer Vision"],
         github: "https://github.com/Gabrielpanashe/face-access-system",
         demo: "https://demo.example.com",
+        category: "AI/ML",
+    },
+    {
+        title: "Doctor Assistant AI",
+        description: "Intelligent medical diagnosis support system powered by large language models and clinical data. Focuses on healthcare accessibility and preliminary diagnostic accuracy.",
+        status: "In Development",
+        tags: ["Next.js", "Python", "LLMs", "RAG", "Healthcare"],
+        github: "https://github.com/Gabrielpanashe/doctor-ai",
+        demo: "#",
         category: "AI/ML",
     },
     {
@@ -83,22 +92,6 @@ export function Projects() {
         <section id="projects" className="py-24 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
-                >
-                    <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-                        Featured <span className="gradient-text">Projects</span>
-                    </h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        A selection of engineering projects demonstrating my expertise in AI development,
-                        full-stack systems, and secure application design.
-                    </p>
-                </motion.div>
-
-                <motion.div
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -114,9 +107,16 @@ export function Projects() {
                                         <div className="p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                                             <Code2 className="h-6 w-6" />
                                         </div>
-                                        <Badge variant="secondary" className="bg-white/5 text-muted-foreground border-white/10 px-3">
-                                            {project.category}
-                                        </Badge>
+                                        <div className="flex flex-col items-end gap-2">
+                                            <Badge variant="secondary" className="bg-white/5 text-muted-foreground border-white/10 px-3">
+                                                {project.category}
+                                            </Badge>
+                                            {project.status && (
+                                                <Badge variant="outline" className="bg-emerald-500/10 text-emerald-400 border-emerald-500/20 px-2 animate-pulse">
+                                                    {project.status}
+                                                </Badge>
+                                            )}
+                                        </div>
                                     </div>
                                     <CardTitle className="text-2xl font-bold mb-2 tracking-tight group-hover:text-primary transition-colors">
                                         {project.title}

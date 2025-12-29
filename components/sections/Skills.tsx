@@ -142,23 +142,8 @@ export function Skills() {
     };
 
     return (
-        <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8 bg-black/40">
+        <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8 border-t border-white/5">
             <div className="max-w-7xl mx-auto">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
-                >
-                    <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-                        Technical <span className="gradient-text">Expertise</span>
-                    </h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        A specialized toolkit for developing intelligent, scalable, and secure engineering solutions.
-                    </p>
-                </motion.div>
-
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
