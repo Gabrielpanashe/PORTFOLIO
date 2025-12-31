@@ -145,6 +145,19 @@ export function Skills() {
         <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8 border-t border-white/5">
             <div className="max-w-7xl mx-auto">
                 <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="flex flex-col items-center text-center mb-16"
+                >
+                    <h2 className="text-4xl sm:text-6xl font-black tracking-tighter uppercase mb-4">
+                        TECHNICAL <span className="gradient-text">TOOLKIT.</span>
+                    </h2>
+                    <p className="text-muted-foreground text-lg max-w-2xl">
+                        A comprehensive overview of my technical expertise and the tools I use to build scalable systems.
+                    </p>
+                </motion.div>
+                <motion.div
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"

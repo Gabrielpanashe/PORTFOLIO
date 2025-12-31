@@ -67,6 +67,28 @@ export function Contact() {
     return (
         <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 mb-20">
             <div className="max-w-7xl mx-auto">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="flex flex-col items-center text-center mb-20"
+                >
+                    <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold tracking-widest uppercase text-primary mb-8">
+                        <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                        </span>
+                        Available for new projects
+                    </motion.div>
+
+                    <motion.h2 variants={itemVariants} className="text-5xl sm:text-7xl font-black tracking-tighter uppercase mb-6">
+                        Let&apos;s <span className="gradient-text">Connect.</span>
+                    </motion.h2>
+                    <motion.p variants={itemVariants} className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
+                        Have a project in mind or just want to say hi? I&apos;m always open to discussing new opportunities and technical challenges.
+                    </motion.p>
+                </motion.div>
+
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                     {/* Left Side: Contact Info */}
                     <motion.div
@@ -75,21 +97,6 @@ export function Contact() {
                         whileInView="visible"
                         viewport={{ once: true }}
                     >
-                        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold tracking-widest uppercase text-primary mb-8">
-                            <span className="relative flex h-2 w-2">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                            </span>
-                            Available for new projects
-                        </motion.div>
-
-                        <motion.h2 variants={itemVariants} className="text-5xl sm:text-6xl font-black tracking-tighter uppercase mb-6">
-                            Let&apos;s <span className="gradient-text">Connect.</span>
-                        </motion.h2>
-                        <motion.p variants={itemVariants} className="text-xl text-muted-foreground mb-12 max-w-md leading-relaxed">
-                            Have a project in mind or just want to say hi? I&apos;m always open to discussing new opportunities and technical challenges.
-                        </motion.p>
-
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
                             {contactMethods.map((method, index) => {
                                 const Icon = method.icon;
