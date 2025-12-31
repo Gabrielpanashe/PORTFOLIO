@@ -12,48 +12,44 @@ const timeline = [
         period: "August 2021 - Present (June 2026)",
         description: "Focused on AI, Embedded systems, and software engineering. Relevant coursework includes Machine Learning, Computer Vision, Data Structures, and Network Security.",
         achievements: [
-            "GPA: 3.8/4.0",
-            "Dean's List (Multiple Semesters)",
-            "Research Assistant in AI Lab"
+            "GPA: pending",
         ]
     },
     {
         type: "experience",
         icon: Briefcase,
-        title: "Full-Stack Developer Intern",
-        organization: "Tech Company Name",
-        period: "Summer 2024",
-        description: "Developed and deployed scalable web applications using React, Node.js, and PostgreSQL. Collaborated with cross-functional teams to deliver features on time.",
+        title: "IT Support & Network Administrator Intern",
+        organization: "Afroproduct Technologies",
+        period: "October 2024 - May 2025",
+        description: "Provided technical support and managed network infrastructure, ensuring high system availability and security.",
         achievements: [
-            "Built RESTful APIs serving 10k+ users",
-            "Improved application performance by 40%",
-            "Implemented CI/CD pipeline"
+            "Network Administration",
+            "IT Support",
+            "Hardware Maintenance"
         ]
     },
     {
-        type: "experience",
-        icon: Briefcase,
-        title: "AI Research Intern",
-        organization: "Research Lab / Company",
-        period: "Summer 2023",
-        description: "Conducted research on computer vision and deep learning models for real-time object detection and classification.",
+        type: "community",
+        icon: Award,
+        title: "Community & Leadership",
+        organization: "Various Organizations",
+        period: "2024 - Present",
+        description: "Active involvement in professional societies and student leadership roles.",
         achievements: [
-            "Trained models achieving 95% accuracy",
-            "Published research paper",
-            "Presented findings at conference"
+            "Member of Computer Society of Zimbabwe (January 2026)",
+            "Student Representative Assembly - School of Engineering (2024)",
+            "Secretary General - Methodist on Campus Ministries (2025-2026)"
         ]
     },
     {
         type: "certification",
         icon: Award,
-        title: "Certifications & Awards",
+        title: "Certifications",
         organization: "Various Platforms",
         period: "2022 - Present",
-        description: "Continuous learning through professional certifications and competitive programming.",
+        description: "Professional development through specialized courses and certifications.",
         achievements: [
-            "AWS Certified Cloud Practitioner",
-            "TensorFlow Developer Certificate",
-            "Hackathon Winner (2x)"
+            "pending"
         ]
     }
 ];

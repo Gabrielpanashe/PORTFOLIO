@@ -1,23 +1,10 @@
 import type { Metadata } from "next";
-import { Roboto, JetBrains_Mono, Lobster } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700", "900"],
   variable: "--font-roboto",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const lobster = Lobster({
-  weight: "400",
-  variable: "--font-lobster",
   subsets: ["latin"],
   display: "swap",
 });
@@ -58,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${roboto.variable} ${jetbrainsMono.variable} ${lobster.variable} font-sans antialiased min-h-screen bg-background text-foreground flex flex-col`}
+        className={`${roboto.variable} font-sans antialiased min-h-screen bg-background text-foreground flex flex-col`}
       >
         <Navigation />
         <main className="flex-grow">

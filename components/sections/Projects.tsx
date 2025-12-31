@@ -8,6 +8,14 @@ import { Badge } from "@/components/ui/badge";
 
 const projects = [
     {
+        title: "Billboard Management System",
+        description: "A group project developed to address financial leaks in city council revenue collection from billboards. Streamlines management and ensures transparency in advertising revenue.",
+        tags: ["Next.js", "TypeScript", "PostgreSQL", "Financial Systems"],
+        github: "https://github.com/lordskyzw/billboardHot100",
+        demo: "#",
+        category: "Full-Stack",
+    },
+    {
         title: "AI Face Powered System",
         description: "Biometric authentication system with liveness detection and anti-spoofing capabilities using deep learning models. Features real-time processing and secure embedding storage.",
         tags: ["Python", "TensorFlow", "React", "FastAPI", "Computer Vision"],
@@ -23,46 +31,6 @@ const projects = [
         github: "https://github.com/Gabrielpanashe/doctor-ai",
         demo: "#",
         category: "AI/ML",
-    },
-    {
-        title: "Full-Stack E-Commerce Platform",
-        description: "Scalable e-commerce solution with real-time inventory management, payment integration, and admin dashboard. Built with security and performance in mind.",
-        tags: ["Next.js", "TypeScript", "PostgreSQL", "Stripe", "Tailwind CSS"],
-        github: "https://github.com/Gabrielpanashe/ecommerce",
-        demo: "https://demo.example.com",
-        category: "Full-Stack",
-    },
-    {
-        title: "Security-Aware Chat Application",
-        description: "End-to-end encrypted messaging platform with JWT authentication and role-based access control. Implements secure WebSocket communication.",
-        tags: ["Node.js", "Socket.io", "MongoDB", "React", "Encryption"],
-        github: "https://github.com/Gabrielpanashe/secure-chat",
-        demo: "https://demo.example.com",
-        category: "Security",
-    },
-    {
-        title: "Machine Learning Model Pipeline",
-        description: "Automated ML pipeline for model training, versioning, and deployment with monitoring and A/B testing capabilities.",
-        tags: ["Python", "Docker", "Kubernetes", "MLflow", "FastAPI"],
-        github: "https://github.com/Gabrielpanashe/ml-pipeline",
-        demo: "https://demo.example.com",
-        category: "AI/ML",
-    },
-    {
-        title: "Real-Time Data Analytics Dashboard",
-        description: "Interactive dashboard for visualizing large-scale data streams with real-time updates and predictive analytics integration.",
-        tags: ["React", "D3.js", "Apache Kafka", "Python", "Redis"],
-        github: "https://github.com/Gabrielpanashe/analytics-dashboard",
-        demo: "https://demo.example.com",
-        category: "Full-Stack",
-    },
-    {
-        title: "IoT Smart Home Automation",
-        description: "IoT platform for controlling and monitoring smart home devices with voice commands and mobile app integration using MQTT.",
-        tags: ["Raspberry Pi", "MQTT", "React Native", "Firebase", "Arduino"],
-        github: "https://github.com/Gabrielpanashe/smart-home",
-        demo: "https://demo.example.com",
-        category: "IoT",
     },
 ];
 
