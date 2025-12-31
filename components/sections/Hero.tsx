@@ -44,7 +44,6 @@ export function Hero() {
     };
 
     return (
-    return (
         <section className="relative min-h-[90vh] flex items-center pt-28 pb-20 overflow-hidden px-6 lg:px-8">
             {/* Background Decorations */}
             <div className="absolute top-0 right-0 -z-10 w-[600px] h-[600px] bg-primary/10 blur-[150px] rounded-full pointer-events-none animate-pulse" />
@@ -158,14 +157,5 @@ export function Hero() {
                 </div>
             </div>
         </section>
-    );
-
-    {/* Decorative Frames */ }
-                        <div className="absolute -top-8 -right-8 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10 animate-pulse" />
-                        <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -z-10 animate-pulse" />
-                    </motion.div >
-                </div >
-            </div >
-        </section >
     );
 }
