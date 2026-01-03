@@ -19,7 +19,7 @@ const timeline = [
         type: "experience",
         icon: Briefcase,
         title: "IT Support & Network Administrator Intern",
-        organization: "Afroproduct Technologies",
+        organization: "Infoproduct Technologies",
         period: "October 2024 - May 2025",
         description: "Provided technical support and managed network infrastructure, ensuring high system availability and security.",
         achievements: [
@@ -38,7 +38,7 @@ const timeline = [
         achievements: [
             "Member of Computer Society of Zimbabwe (January 2026)",
             "Student Representative Assembly - School of Engineering (2024)",
-            "Secretary General - Methodist on Campus Ministries (2025-2026)"
+            "Secretary General - Methodist Church on Campus Ministries (2025-2026)"
         ]
     },
     {

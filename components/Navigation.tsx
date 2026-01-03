@@ -47,7 +47,7 @@ export function Navigation() {
                         </div>
                         <div className="flex flex-col leading-none">
                             <span className="text-lg font-black tracking-tighter text-white">PANASHE</span>
-                            <span className="text-[10px] font-bold tracking-[0.2em] text-primary/80 uppercase mt-0.5">Systems Engineer</span>
+                            <span className="text-[10px] font-bold tracking-[0.2em] text-primary/80 uppercase mt-0.5">Computer Engineer</span>
                         </div>
                     </Link>
 

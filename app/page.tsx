@@ -119,9 +119,18 @@ export default function Home() {
                   </div>
                   <h3 className="text-2xl font-black text-white mb-2 uppercase tracking-tighter">Billboard Management</h3>
                   <p className="text-muted-foreground text-sm mb-6 line-clamp-3">Addressing financial leaks in city council revenue collection through streamlined billboard management.</p>
-                  <Link href="https://github.com/lordskyzw/billboardHot100" target="_blank" className="inline-flex items-center text-white font-bold hover:text-primary transition-colors text-sm uppercase tracking-widest">
-                    View Source <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                  <div className="flex items-center gap-4 mt-auto">
+                    <Button variant="outline" size="sm" className="rounded-xl border-white/10 hover:bg-white/10" asChild>
+                      <Link href="https://github.com/lordskyzw/billboardHot100" target="_blank">
+                        Source <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                    <Button size="sm" className="rounded-xl bg-primary hover:bg-primary/90 text-white shadow-lg" asChild>
+                      <Link href="https://hccfrontend.up.railway.app/login" target="_blank">
+                        Live Demo
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -145,9 +154,18 @@ export default function Home() {
                   </div>
                   <h3 className="text-2xl font-black text-white mb-2 uppercase tracking-tighter">Face Access System</h3>
                   <p className="text-muted-foreground text-sm mb-6 line-clamp-3">Next-gen biometric authentication with deep learning and real-time liveness detection.</p>
-                  <Link href="https://github.com/Gabrielpanashe/face-access-system" target="_blank" className="inline-flex items-center text-white font-bold hover:text-primary transition-colors text-sm uppercase tracking-widest">
-                    View Source <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                  <div className="flex items-center gap-4 mt-auto">
+                    <Button variant="outline" size="sm" className="rounded-xl border-white/10 hover:bg-white/10" asChild>
+                      <Link href="https://github.com/Gabrielpanashe/face-access-system" target="_blank">
+                        Source <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                    <Button size="sm" className="rounded-xl bg-primary hover:bg-primary/90 text-white shadow-lg" asChild>
+                      <Link href="#" target="_blank">
+                        Live Demo
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -171,9 +189,18 @@ export default function Home() {
                   </div>
                   <h3 className="text-2xl font-black text-white mb-2 uppercase tracking-tighter">Doctor AI Assistant</h3>
                   <p className="text-muted-foreground text-sm mb-6 line-clamp-3">Intelligent medical diagnosis support system powered by LLMs and clinical data.</p>
-                  <Link href="https://github.com/Gabrielpanashe/doctor-ai" target="_blank" className="inline-flex items-center text-white font-bold hover:text-primary transition-colors text-sm uppercase tracking-widest">
-                    Track Progress <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                  <div className="flex items-center gap-4 mt-auto">
+                    <Button variant="outline" size="sm" className="rounded-xl border-white/10 hover:bg-white/10" asChild>
+                      <Link href="https://github.com/Gabrielpanashe/doctor-ai" target="_blank">
+                        Source <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                    <Button size="sm" className="rounded-xl bg-primary hover:bg-primary/90 text-white shadow-lg" asChild>
+                      <Link href="#" target="_blank">
+                        Live Demo
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </motion.div>

@@ -12,7 +12,7 @@ const projects = [
         description: "A group project developed to address financial leaks in city council revenue collection from billboards. Streamlines management and ensures transparency in advertising revenue.",
         tags: ["Next.js", "TypeScript", "PostgreSQL", "Financial Systems"],
         github: "https://github.com/lordskyzw/billboardHot100",
-        demo: "#",
+        demo: "https://hccfrontend.up.railway.app/login",
         category: "Full-Stack",
     },
     {
