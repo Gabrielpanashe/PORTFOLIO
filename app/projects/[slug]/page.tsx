@@ -76,7 +76,7 @@ export default function ProjectPage({ params }: Props) {
                                     )}
                                 </div>
                                 <h1 className="text-5xl sm:text-7xl font-black tracking-tighter uppercase leading-none">
-                                    {project.title.split(" ").slice(0, -1).join(" ")} <span className="gradient-text">{project.title.split(" ").pop()}</span>
+                                    {project.title}
                                 </h1>
                             </div>
                         </div>
