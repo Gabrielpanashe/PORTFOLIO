@@ -10,6 +10,7 @@ export interface Project {
     category: string;
     slug: string;
     status?: string;
+    coverImage: string;
 }
 
 export const projects: Project[] = [
@@ -24,6 +25,7 @@ export const projects: Project[] = [
         github: "https://github.com/lordskyzw/billboardHot100",
         demo: "https://hccfrontend.up.railway.app/login",
         category: "Full-Stack",
+        coverImage: "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80&w=800",
     },
     {
         title: "AI Face Powered System",
@@ -36,6 +38,7 @@ export const projects: Project[] = [
         github: "https://github.com/Gabrielpanashe/face-access-system",
         demo: "https://demo.example.com",
         category: "AI/ML",
+        coverImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
     },
     {
         title: "Doctor Assistant AI",
@@ -49,6 +52,7 @@ export const projects: Project[] = [
         github: "https://github.com/Gabrielpanashe/doctor-ai",
         demo: "#",
         category: "AI/ML",
+        coverImage: "https://images.unsplash.com/photo-1576091160550-217359f48f4c?auto=format&fit=crop&q=80&w=800",
     },
     {
         title: "School Management System",
@@ -62,5 +66,6 @@ export const projects: Project[] = [
         github: "#",
         demo: "#",
         category: "Full-Stack",
+        coverImage: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=800",
     },
 ];
