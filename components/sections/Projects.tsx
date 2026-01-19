@@ -5,36 +5,13 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink, Code2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { useRouter } from "next/navigation";
 
-const projects = [
-    {
-        title: "Billboard Management System",
-        description: "A group project developed to address financial leaks in city council revenue collection from billboards. Streamlines management and ensures transparency in advertising revenue.",
-        tags: ["Next.js", "TypeScript", "PostgreSQL", "Financial Systems"],
-        github: "https://github.com/lordskyzw/billboardHot100",
-        demo: "https://hccfrontend.up.railway.app/login",
-        category: "Full-Stack",
-    },
-    {
-        title: "AI Face Powered System",
-        description: "Biometric authentication system with liveness detection and anti-spoofing capabilities using deep learning models. Features real-time processing and secure embedding storage.",
-        tags: ["Python", "TensorFlow", "React", "FastAPI", "Computer Vision"],
-        github: "https://github.com/Gabrielpanashe/face-access-system",
-        demo: "https://demo.example.com",
-        category: "AI/ML",
-    },
-    {
-        title: "Doctor Assistant AI",
-        description: "Intelligent medical diagnosis support system powered by large language models and clinical data. Focuses on healthcare accessibility and preliminary diagnostic accuracy.",
-        status: "In Development",
-        tags: ["Next.js", "Python", "LLMs", "RAG", "Healthcare"],
-        github: "https://github.com/Gabrielpanashe/doctor-ai",
-        demo: "#",
-        category: "AI/ML",
-    },
-];
+import { projects } from "@/data/projects";
 
 export function Projects() {
+    const router = useRouter();
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -80,8 +57,13 @@ export function Projects() {
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                 >
                     {projects.map((project, index) => (
-                        <motion.div key={index} variants={itemVariants}>
-                            <Card className="h-full flex flex-col group bg-card transition-all duration-500 hover:border-primary/50 hover:shadow-[0_0_40px_rgba(25,35,45,0.1)] border-white/5 overflow-hidden">
+                        <motion.div
+                            key={index}
+                            variants={itemVariants}
+                            className="group relative h-full cursor-pointer"
+                            onClick={() => router.push(`/projects/${project.slug}`)}
+                        >
+                            <Card className="h-full flex flex-col bg-card transition-all duration-500 hover:border-primary/50 hover:shadow-[0_0_40px_rgba(25,35,45,0.1)] border-white/5 overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                                 <CardHeader className="relative">
                                     <div className="flex items-start justify-between mb-4">
@@ -102,8 +84,19 @@ export function Projects() {
                                     <CardTitle className="text-2xl font-bold mb-2 tracking-tight group-hover:text-primary transition-colors">
                                         {project.title}
                                     </CardTitle>
-                                    <CardDescription className="text-muted-foreground leading-relaxed line-clamp-3">
-                                        {project.description}
+                                    <CardDescription className="text-muted-foreground leading-relaxed text-sm space-y-4">
+                                        <div className="space-y-1">
+                                            <p className="font-bold text-white text-xs uppercase tracking-wider">Purpose</p>
+                                            <p className="line-clamp-2">{project.purpose}</p>
+                                        </div>
+                                        <div className="space-y-1">
+                                            <p className="font-bold text-white text-xs uppercase tracking-wider">The Problem</p>
+                                            <p className="line-clamp-2">{project.problem}</p>
+                                        </div>
+                                        <div className="space-y-1">
+                                            <p className="font-bold text-white text-xs uppercase tracking-wider">Tech Stack</p>
+                                            <p className="text-primary/90 line-clamp-1">{project.techStack}</p>
+                                        </div>
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent className="flex-grow relative">
@@ -118,26 +111,29 @@ export function Projects() {
                                         ))}
                                     </div>
                                 </CardContent>
-                                <CardFooter className="gap-3 relative">
-                                    <Button variant="outline" size="sm" className="flex-1 bg-white/5 border-white/10 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300" asChild>
-                                        <a
-                                            href={project.github}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <Github className="mr-2 h-4 w-4" />
-                                            Source
-                                        </a>
+                                <CardFooter className="gap-3 relative z-20">
+                                    <Button
+                                        variant="outline"
+                                        size="sm"
+                                        className="flex-1 bg-white/5 border-white/10 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            if (project.github !== "#") window.open(project.github, "_blank");
+                                        }}
+                                    >
+                                        <Github className="mr-2 h-4 w-4" />
+                                        Source
                                     </Button>
-                                    <Button size="sm" className="flex-1 shadow-lg shadow-primary/20" asChild>
-                                        <a
-                                            href={project.demo}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <ExternalLink className="mr-2 h-4 w-4" />
-                                            Live Demo
-                                        </a>
+                                    <Button
+                                        size="sm"
+                                        className="flex-1 shadow-lg shadow-primary/20"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            if (project.demo !== "#") window.open(project.demo, "_blank");
+                                        }}
+                                    >
+                                        <ExternalLink className="mr-2 h-4 w-4" />
+                                        Live Demo
                                     </Button>
                                 </CardFooter>
                             </Card>

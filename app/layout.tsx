@@ -10,23 +10,35 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Computer Engineer & AI Developer",
-  description: "Professional portfolio showcasing AI systems, full-stack applications, and security-aware platforms by a Computer Engineering student and Full-Stack Developer.",
-  keywords: ["Computer Engineer", "AI Developer", "Full-Stack Developer", "Machine Learning", "Web Development", "Portfolio"],
-  authors: [{ name: "PANASHE M CHANDIWANA" }],
-  creator: "PANASHE M CHANDIWANA",
+  title: {
+    default: "Gabriel Panashe | Computer Engineer & AI Developer",
+    template: "%s | Gabriel Panashe",
+  },
+  description: "Professional portfolio of Gabriel Panashe, showcasing AI systems, full-stack applications, and security-aware platforms.",
+  keywords: ["Computer Engineer", "AI Developer", "Full-Stack Developer", "Machine Learning", "Web Development", "Portfolio", "Gabriel Panashe", "Security Engineering"],
+  authors: [{ name: "Gabriel Panashe M Chandiwana" }],
+  creator: "Gabriel Panashe M Chandiwana",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://panashechandiwana.com",
-    title: "Portfolio | Computer Engineering & AI Developer",
+    title: "Gabriel Panashe | Computer Engineer & AI Developer",
     description: "Professional portfolio showcasing AI systems, full-stack applications, and security-aware platforms.",
-    siteName: "Portfolio",
+    siteName: "Gabriel Panashe Portfolio",
+    images: [
+      {
+        url: "/profile_new.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Gabriel Panashe Portfolio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Portfolio | Computer Engineering & AI Developer",
+    title: "Gabriel Panashe | Computer Engineer & AI Developer",
     description: "Professional portfolio showcasing AI systems, full-stack applications, and security-aware platforms.",
+    images: ["/profile_new.jpg"],
   },
   robots: {
     index: true,

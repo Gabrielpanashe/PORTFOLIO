@@ -60,7 +60,7 @@ export function Hero() {
                             {/* Floating Card Info */}
                             <div className="absolute bottom-8 left-8 right-8 z-20 backdrop-blur-md bg-white/10 border border-white/10 p-5 rounded-2xl transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">
                                 <p className="text-white text-xl font-black uppercase tracking-tight">G. Panashe</p>
-                                <p className="text-primary font-bold text-[10px] tracking-[0.2em] uppercase mt-1">Computer Engineer</p>
+                                <p className="text-primary font-bold text-[10px] tracking-[0.2em] uppercase mt-1">Computer Engineer | Full-Stack Developer | AI</p>
                             </div>
                         </div>
 
