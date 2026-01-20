@@ -1,21 +1,35 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Hero } from "@/components/sections/Hero";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, Code2, Brain, Shield } from "lucide-react";
+import { useState, useEffect } from "react";
 
 import { useRouter } from "next/navigation";
 
 export function HomeContent() {
     const router = useRouter();
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const skills = [
+        { name: "React & Next.js", img: "https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?auto=format&fit=crop&q=80&w=400" },
+        { name: "Python AI/ML", img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=400" },
+        { name: "Cloud & DevOps", img: "https://images.unsplash.com/photo-1605745341112-85968b193ef5?auto=format&fit=crop&q=80&w=400" },
+        { name: "Cybersecurity", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400" },
+    ];
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setActiveIndex((prev) => (prev + 1) % skills.length);
+        }, 3000);
+        return () => clearInterval(timer);
+    }, [skills.length]);
 
     return (
         <main className="w-full">
             <Hero />
-
-            {/* About Section Teaser ... (line 26-67 unchanged) */}
 
             {/* Featured Teaser */}
             <section className="py-32 bg-white/[0.01]">
@@ -47,7 +61,7 @@ export function HomeContent() {
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {/* Billboard Management System */}
+                        {/* Project Cards... (Rest preserved as is) */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -88,7 +102,6 @@ export function HomeContent() {
                             </div>
                         </motion.div>
 
-                        {/* AI Face Powered System */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -130,7 +143,6 @@ export function HomeContent() {
                             </div>
                         </motion.div>
 
-                        {/* Doctor AI Assistant */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -172,7 +184,6 @@ export function HomeContent() {
                             </div>
                         </motion.div>
 
-                        {/* School Management ERP */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -218,74 +229,91 @@ export function HomeContent() {
             </section>
 
             {/* Expertise Section */}
-            <section className="py-32 border-t border-white/5 overflow-hidden">
-                <div className="max-w-7xl mx-auto px-6 mb-20 text-center flex flex-col items-center">
-                    <div className="max-w-3xl">
-                        <h2 className="text-5xl sm:text-7xl font-black mb-8 tracking-tighter uppercase relative isolate">
-                            TECHNICAL <span className="gradient-text">DNA</span>.
-                            <div className="absolute left-1/2 -top-12 -translate-x-1/2 w-32 h-32 bg-primary/20 blur-3xl -z-10 animate-pulse" />
-                        </h2>
-                        <p className="text-muted-foreground text-xl leading-relaxed mb-12">
-                            My expertise spans the entire software engineering lifecycle, with a deep specialization in
-                            intelligent systems and secure infrastructure.
-                        </p>
-                        <Button variant="link" size="lg" asChild className="text-primary hover:text-white p-0 h-auto text-xl font-bold group">
-                            <Link href="/skills" className="flex items-center">
-                                Explore Full Toolkit <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform" />
-                            </Link>
-                        </Button>
-                    </div>
+            <section className="py-24 border-t border-white/5 overflow-hidden relative">
+                {/* Background Glows for \"Alive\" feel */}
+                <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+                    <div className="absolute top-1/4 -left-20 w-80 h-80 bg-[#A67B5B]/10 blur-[120px] rounded-full animate-pulse" />
+                    <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-accent/10 blur-[120px] rounded-full animate-pulse delay-1000" />
                 </div>
 
-                {/* Sliding Marquee */}
-                <div className="relative flex overflow-hidden group py-10 bg-white/[0.01]">
-                    <motion.div
-                        className="flex gap-8 animate-marquee"
-                        animate={{
-                            x: [0, -1032],
-                        }}
-                        transition={{
-                            duration: 30,
-                            repeat: Infinity,
-                            ease: "linear",
-                        }}
-                    >
-                        {[
-                            { name: "React", img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=400" },
-                            { name: "Next.js", img: "https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?auto=format&fit=crop&q=80&w=400" },
-                            { name: "Python", img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=400" },
-                            { name: "TensorFlow", img: "https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=400" },
-                            { name: "Node.js", img: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&q=80&w=400" },
-                            { name: "Docker", img: "https://images.unsplash.com/photo-1605745341112-85968b193ef5?auto=format&fit=crop&q=80&w=400" },
-                            { name: "AI/ML", img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=400" },
-                            { name: "Security", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400" },
-                        ].concat([
-                            { name: "React", img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=400" },
-                            { name: "Next.js", img: "https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?auto=format&fit=crop&q=80&w=400" },
-                            { name: "Python", img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=400" },
-                            { name: "TensorFlow", img: "https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=400" },
-                            { name: "Node.js", img: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&q=80&w=400" },
-                            { name: "Docker", img: "https://images.unsplash.com/photo-1605745341112-85968b193ef5?auto=format&fit=crop&q=80&w=400" },
-                            { name: "AI/ML", img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=400" },
-                            { name: "Security", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400" },
-                        ]).map((skill, idx) => (
-                            <div key={idx} className="flex-shrink-0 w-64 h-80 relative rounded-3xl overflow-hidden group/card border border-white/10 shadow-3xl transform hover:scale-105 transition-all duration-500">
-                                <div
-                                    className="absolute inset-0 bg-cover bg-center grayscale group-hover/card:grayscale-0 group-hover/card:scale-110 transition-all duration-700"
-                                    style={{ backgroundImage: `url('${skill.img}')` }}
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent z-10" />
-                                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover/card:opacity-100 transition-opacity z-20" />
-                                <div className="relative h-full flex flex-col justify-end p-8 z-30">
-                                    <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md mb-4 flex items-center justify-center text-white font-black border border-white/20">
-                                        {skill.name[0]}
-                                    </div>
-                                    <span className="text-xl font-black text-white uppercase tracking-tighter">{skill.name}</span>
-                                    <div className="h-1 w-0 bg-primary group-hover/card:w-full transition-all duration-500 mt-2 rounded-full" />
-                                </div>
+                <div className="max-w-7xl mx-auto px-6 relative z-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-0 items-center">
+                        {/* Left Content - DNA */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className="flex flex-col items-start text-left z-20"
+                        >
+                            <h2 className="text-4xl sm:text-7xl font-black mb-6 tracking-tighter uppercase relative leading-none">
+                                <span className="text-[#A67B5B]">TECHNICAL</span> <br />
+                                <span className="gradient-text">DNA</span>.
+                                <div className="absolute -left-4 top-0 w-1 h-24 bg-[#A67B5B]/30 blur-sm" />
+                            </h2>
+                            <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-lg">
+                                My expertise spans the entire software engineering lifecycle, with a deep specialization in
+                                <span className="text-white font-medium text-nowrap"> intelligent systems</span> and <span className="text-white font-medium text-nowrap">secure infrastructure</span>.
+                            </p>
+                            <Button size="lg" asChild className="rounded-full h-12 px-8 bg-[#A67B5B] hover:bg-[#A67B5B]/90 text-white font-bold group shadow-xl">
+                                <Link href="/skills" className="flex items-center">
+                                    Explore Full Toolkit <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform" />
+                                </Link>
+                            </Button>
+                        </motion.div>
+
+                        {/* Right Content - 3D Multi-Card Auto-Shuffling Animation */}
+                        <div className="relative h-[400px] sm:h-[500px] w-full flex items-center justify-center lg:justify-end pr-0 lg:-ml-20">
+                            <div className="relative w-full max-w-[300px] h-full flex items-center justify-center">
+                                {skills.map((skill, idx) => {
+                                    // Calculate position based on activeIndex
+                                    const position = (idx - activeIndex + skills.length) % skills.length;
+                                    const isFront = position === 0;
+
+                                    return (
+                                        <motion.div
+                                            key={idx}
+                                            animate={{
+                                                opacity: isFront ? 1 : 0.6 + (0.1 * position),
+                                                scale: isFront ? 1 : 1 - (0.05 * position),
+                                                x: isFront ? 0 : 20 * position,
+                                                y: isFront ? 0 : 15 * position,
+                                                rotateZ: isFront ? 0 : 5 * position,
+                                                rotateY: isFront ? 0 : 15,
+                                                zIndex: skills.length - position,
+                                            }}
+                                            transition={{
+                                                type: "spring",
+                                                stiffness: 100,
+                                                damping: 20,
+                                                mass: 1
+                                            }}
+                                            className="absolute w-full aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/10 glass-card shadow-2xl group/card cursor-pointer"
+                                            onClick={() => setActiveIndex(idx)}
+                                        >
+                                            <div
+                                                className="absolute inset-0 bg-cover bg-center grayscale group-hover/card:grayscale-0 transition-all duration-700"
+                                                style={{ backgroundImage: `url('${skill.img}')` }}
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+                                            {isFront && <div className="absolute inset-0 bg-primary/20 transition-opacity" />}
+
+                                            {/* Glossy Overlay */}
+                                            <div className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-transparent opacity-30 pointer-events-none" />
+
+                                            <div className="relative h-full flex flex-col justify-end p-8">
+                                                <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-md mb-4 flex items-center justify-center text-white font-black border border-white/20 text-sm">
+                                                    {skill.name[0]}
+                                                </div>
+                                                <span className="text-xl font-black text-white uppercase tracking-tighter leading-none">{skill.name}</span>
+                                                <div className={`h-1 bg-primary mt-2 rounded-full transition-all duration-500 ${isFront ? 'w-full' : 'w-0'}`} />
+                                            </div>
+                                        </motion.div>
+                                    );
+                                })}
                             </div>
-                        ))}
-                    </motion.div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
