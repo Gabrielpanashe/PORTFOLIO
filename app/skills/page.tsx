@@ -18,6 +18,7 @@ export default function SkillsPage() {
                 title="Technical"
                 gradientText="Expertise"
                 subtitle="Exploring my technical toolkit and the technologies I use to bring ideas to life."
+                accentColor="brown"
             />
             <Skills />
         </div>

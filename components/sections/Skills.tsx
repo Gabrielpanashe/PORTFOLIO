@@ -9,8 +9,10 @@ import {
     Shield,
     Cpu,
     Globe,
-    Terminal
+    Terminal,
+    Laptop
 } from "lucide-react";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 
 const skillCategories = [
     {
@@ -144,19 +146,12 @@ export function Skills() {
     return (
         <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8 border-t border-white/5">
             <div className="max-w-7xl mx-auto">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="flex flex-col items-center text-center mb-16"
-                >
-                    <h2 className="text-4xl sm:text-6xl font-black tracking-tighter uppercase mb-4">
-                        TECHNICAL <span className="gradient-text">TOOLKIT.</span>
-                    </h2>
-                    <p className="text-muted-foreground text-lg max-w-2xl">
-                        A comprehensive overview of my technical expertise and the tools I use to build scalable systems.
-                    </p>
-                </motion.div>
+                <SectionHeader
+                    title="TECHNICAL"
+                    gradientText="TOOLKIT."
+                    subtitle="A comprehensive overview of my technical expertise and the tools I use to build scalable systems."
+                    accentColor="brown"
+                />
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -172,18 +167,18 @@ export function Skills() {
                                 variants={itemVariants}
                                 className="group"
                             >
-                                <div className="h-full p-8 rounded-2xl border border-white/5 bg-gradient-to-b from-white/[0.08] to-transparent hover:border-primary/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(25,35,45,0.1)]">
+                                <div className="h-full p-8 rounded-2xl border border-white/5 bg-gradient-to-b from-white/[0.08] to-transparent hover:border-[#A67B5B]/50 hover:bg-[#A67B5B]/5 transition-all duration-500 hover:shadow-[0_0_30px_rgba(166,123,91,0.1)]">
                                     <div className="flex items-center gap-4 mb-6">
-                                        <div className="p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                                        <div className="p-3 rounded-xl bg-[#A67B5B]/10 text-[#A67B5B] group-hover:bg-[#A67B5B] group-hover:text-white transition-colors duration-300">
                                             <Icon className="h-6 w-6" />
                                         </div>
-                                        <h3 className="font-bold text-xl tracking-tight">{category.title}</h3>
+                                        <h3 className="font-bold text-xl tracking-tight text-white">{category.title}</h3>
                                     </div>
                                     <div className="flex flex-wrap gap-2">
                                         {category.skills.map((skill, skillIndex) => (
                                             <span
                                                 key={skillIndex}
-                                                className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-muted-foreground group-hover:text-foreground group-hover:border-primary/20 transition-all duration-300"
+                                                className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-muted-foreground group-hover:text-white group-hover:border-[#A67B5B]/30 transition-all duration-300"
                                             >
                                                 {skill}
                                             </span>

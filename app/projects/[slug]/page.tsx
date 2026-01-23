@@ -24,11 +24,19 @@ export async function generateMetadata({ params }: Props) {
     if (!project) return { title: "Project Not Found" };
 
     return {
-        title: `${project.title} | Gabriel Panashe`,
-        description: project.description,
+        title: `${project.title} | ${project.category} Project by Gabriel Panashe`,
+        description: `${project.description} Solve ${project.problem.toLowerCase()}`,
         openGraph: {
-            title: `${project.title} | Gabriel Panashe`,
+            title: `${project.title} | Gabriel Panashe Engineering`,
             description: project.description,
+            images: [
+                {
+                    url: project.coverImage,
+                    width: 1200,
+                    height: 630,
+                    alt: project.altText,
+                },
+            ],
         },
     };
 }
@@ -43,9 +51,9 @@ export default async function ProjectPage({ params }: Props) {
 
     const getIcon = (category: string) => {
         switch (category) {
-            case "AI/ML": return <Brain className="h-12 w-12 text-blue-400" />;
+            case "AI/ML": return <Brain className="h-12 w-12 text-primary" />;
             case "Full-Stack": return <Code2 className="h-12 w-12 text-primary" />;
-            case "Security AI": return <Shield className="h-12 w-12 text-emerald-400" />;
+            case "Security AI": return <Shield className="h-12 w-12 text-primary" />;
             default: return <Laptop className="h-12 w-12 text-muted-foreground" />;
         }
     };
@@ -57,7 +65,7 @@ export default async function ProjectPage({ params }: Props) {
                 <div className="absolute inset-0">
                     <Image
                         src={project.coverImage}
-                        alt={project.title}
+                        alt={project.altText}
                         fill
                         className="object-cover"
                         priority
@@ -125,7 +133,9 @@ export default async function ProjectPage({ params }: Props) {
                                 <div className="h-px bg-[#A67C52]/20 flex-grow" />
                             </div>
                             <p className="text-2xl sm:text-4xl text-white font-medium leading-tight tracking-tight">
-                                {project.purpose}
+                                {project.slug === "doctor-ai"
+                                    ? "The main aim of this research is to design and implement a precision medicine clinical decision support system that assists doctors in recommending the most effective medication for a patient’s condition while minimizing adverse effects by integrating clinical guidelines, patients EHR history and sentiment analysis of patient-report feedback."
+                                    : project.purpose}
                             </p>
                         </section>
 

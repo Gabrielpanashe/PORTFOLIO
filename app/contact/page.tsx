@@ -18,6 +18,7 @@ export default function ContactPage() {
                 title="Get in"
                 gradientText="Touch"
                 subtitle="Have a question or want to work together? I'm always looking for new opportunities and creative collaborations."
+                accentColor="brown"
             />
             <Contact />
         </div>

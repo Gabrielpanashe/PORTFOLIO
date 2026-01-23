@@ -61,7 +61,7 @@ export function About() {
                 {/* Timeline */}
 
                 <div className="max-w-4xl mx-auto mt-12">
-                    <div className="relative border-l-2 border-primary/30 pl-8 space-y-12">
+                    <div className="relative border-l-2 border-[#A67B5B]/30 pl-8 space-y-12">
                         {timeline.map((item, index) => {
                             const Icon = item.icon;
 
@@ -75,26 +75,26 @@ export function About() {
                                     className="relative"
                                 >
                                     {/* Timeline Dot */}
-                                    <div className="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-background border-4 border-primary shadow-[0_0_10px_rgba(25,35,45,0.5)]" />
+                                    <div className="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-background border-4 border-[#A67B5B] shadow-[0_0_10px_rgba(166,123,91,0.5)]" />
 
                                     {/* Icon Box */}
-                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold mb-4 border border-primary/20 uppercase tracking-wider">
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#A67B5B]/10 text-[#A67B5B] text-xs font-semibold mb-4 border border-[#A67B5B]/20 uppercase tracking-wider">
                                         <Icon className="h-3.5 w-3.5" />
                                         {item.type}
                                     </div>
 
                                     <div className="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
-                                        <h3 className="text-2xl font-bold">{item.title}</h3>
-                                        <span className="text-sm text-primary font-medium md:ml-auto whitespace-nowrap">{item.period}</span>
+                                        <h3 className="text-2xl font-bold text-white">{item.title}</h3>
+                                        <span className="text-sm text-[#A67B5B] font-medium md:ml-auto whitespace-nowrap">{item.period}</span>
                                     </div>
 
-                                    <p className="text-lg text-muted-foreground font-medium mb-3">{item.organization}</p>
+                                    <p className="text-lg text-[#A67B5B]/90 font-medium mb-3">{item.organization}</p>
                                     <p className="text-muted-foreground mb-4 leading-relaxed">{item.description}</p>
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
                                         {item.achievements.map((achievement, achIndex) => (
-                                            <div key={achIndex} className="flex items-start gap-3 p-3 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-primary/20 transition-all group/item">
-                                                <div className="mt-1 w-1.5 h-1.5 rounded-full bg-primary/40 group-hover/item:bg-primary transition-colors shrink-0" />
+                                            <div key={achIndex} className="flex items-start gap-3 p-3 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-[#A67B5B]/50 hover:bg-[#A67B5B]/5 transition-all group/item">
+                                                <div className="mt-1 w-1.5 h-1.5 rounded-full bg-[#A67B5B]/40 group-hover/item:bg-[#A67B5B] transition-colors shrink-0" />
                                                 <span className="text-sm text-muted-foreground group-hover/item:text-white transition-colors">
                                                     {achievement}
                                                 </span>

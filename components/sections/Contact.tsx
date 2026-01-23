@@ -73,16 +73,16 @@ export function Contact() {
                     viewport={{ once: true }}
                     className="flex flex-col items-center text-center mb-20"
                 >
-                    <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold tracking-widest uppercase text-primary mb-8">
+                    <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#A67B5B] text-white text-xs font-bold tracking-widest uppercase mb-8 shadow-lg shadow-[#A67B5B]/20">
                         <span className="relative flex h-2 w-2">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
                         </span>
                         Available for new projects
                     </motion.div>
 
                     <motion.h2 variants={itemVariants} className="text-5xl sm:text-7xl font-black tracking-tighter uppercase mb-6">
-                        Let&apos;s <span className="gradient-text">Connect.</span>
+                        Let&apos;s <span className="text-[#A67B5B]">Connect.</span>
                     </motion.h2>
                     <motion.p variants={itemVariants} className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
                         Have a project in mind or just want to say hi? I&apos;m always open to discussing new opportunities and technical challenges.
@@ -103,15 +103,15 @@ export function Contact() {
                                 const content = (
                                     <motion.div
                                         variants={itemVariants}
-                                        className="group p-6 rounded-2xl border border-white/5 bg-white/[0.03] hover:border-primary/50 transition-all duration-500"
+                                        className="group p-6 rounded-2xl border border-white/5 bg-white/[0.03] hover:border-[#A67B5B]/50 hover:bg-[#A67B5B]/5 transition-all duration-500"
                                     >
                                         <div className="flex items-center gap-4">
-                                            <div className="inline-flex p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                                            <div className="inline-flex p-3 rounded-xl bg-[#A67B5B]/10 text-[#A67B5B] group-hover:bg-[#A67B5B] group-hover:text-white transition-all duration-300">
                                                 <Icon className="h-6 w-6" />
                                             </div>
                                             <div>
-                                                <h3 className="font-bold text-lg">{method.label}</h3>
-                                                <p className="text-muted-foreground group-hover:text-foreground transition-colors break-all">
+                                                <h3 className="font-bold text-lg text-[#A67B5B]">{method.label}</h3>
+                                                <p className="text-muted-foreground group-hover:text-white transition-colors break-all">
                                                     {method.value}
                                                 </p>
                                             </div>
@@ -147,14 +147,11 @@ export function Contact() {
                         <div className="p-8 rounded-[3rem] bg-white/[0.02] border border-white/10 backdrop-blur-sm relative overflow-hidden group">
                             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             <div className="relative z-10 text-center">
-                                <div className="mb-8 inline-flex p-6 rounded-3xl bg-primary/10 text-primary">
-                                    <Mail className="h-12 w-12" />
-                                </div>
-                                <h3 className="text-3xl font-bold mb-4 uppercase">Direct Message</h3>
+                                <h3 className="text-3xl font-bold mb-4 uppercase text-[#A67B5B]">Direct Message</h3>
                                 <p className="text-muted-foreground mb-8">
                                     Drop me an email and I&apos;ll get back to you within 24 hours.
                                 </p>
-                                <Button size="lg" className="w-full h-16 rounded-2xl text-lg font-black uppercase tracking-widest shadow-xl shadow-primary/20" asChild>
+                                <Button size="lg" className="w-full h-16 rounded-2xl text-lg font-black uppercase tracking-widest shadow-xl shadow-[#A67B5B]/20 bg-[#A67B5B] hover:bg-[#8B6542] text-white" asChild>
                                     <a href="mailto:panashechandiwana11@gmail.com">
                                         Send Email
                                     </a>

@@ -3,14 +3,25 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Github, ExternalLink, Code2 } from "lucide-react";
+import { Github, ExternalLink, Code2, Shield, Brain, Laptop } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 import { projects } from "@/data/projects";
 
 export function Projects() {
     const router = useRouter();
+
+    const getIcon = (category: string) => {
+        switch (category) {
+            case "AI/ML": return <Brain className="h-6 w-6" />;
+            case "Full-Stack": return <Code2 className="h-6 w-6" />;
+            case "Security AI": return <Shield className="h-6 w-6" />;
+            default: return <Laptop className="h-6 w-6" />;
+        }
+    };
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -36,19 +47,12 @@ export function Projects() {
     return (
         <section id="projects" className="py-24 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="flex flex-col items-center text-center mb-16"
-                >
-                    <h2 className="text-4xl sm:text-6xl font-black tracking-tighter uppercase mb-4">
-                        FEATURED <span className="gradient-text">PROJECTS.</span>
-                    </h2>
-                    <p className="text-muted-foreground text-lg max-w-2xl">
-                        A collection of high-performance systems and intelligent solutions.
-                    </p>
-                </motion.div>
+                <SectionHeader
+                    title="FEATURED"
+                    gradientText="PROJECTS."
+                    subtitle="A collection of high-performance systems and intelligent solutions."
+                    accentColor="brown"
+                />
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -64,11 +68,20 @@ export function Projects() {
                             onClick={() => router.push(`/projects/${project.slug}`)}
                         >
                             <Card className="h-full flex flex-col bg-card transition-all duration-500 hover:border-primary/50 hover:shadow-[0_0_40px_rgba(25,35,45,0.1)] border-white/5 overflow-hidden">
+                                <div className="relative h-48 w-full overflow-hidden">
+                                    <Image
+                                        src={project.coverImage}
+                                        alt={project.altText}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                                </div>
                                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                <CardHeader className="relative">
+                                <CardHeader className="relative pt-6">
                                     <div className="flex items-start justify-between mb-4">
                                         <div className="p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
-                                            <Code2 className="h-6 w-6" />
+                                            {getIcon(project.category)}
                                         </div>
                                         <div className="flex flex-col items-end gap-2">
                                             <Badge variant="secondary" className="bg-white/5 text-muted-foreground border-white/10 px-3">
@@ -81,7 +94,7 @@ export function Projects() {
                                             )}
                                         </div>
                                     </div>
-                                    <CardTitle className="text-2xl font-bold mb-2 tracking-tight group-hover:text-primary transition-colors">
+                                    <CardTitle className="text-2xl font-bold mb-2 tracking-tight group-hover:text-[#A67B5B] transition-colors text-white">
                                         {project.title}
                                     </CardTitle>
                                     <CardDescription className="text-muted-foreground leading-relaxed text-sm space-y-4">
@@ -95,7 +108,7 @@ export function Projects() {
                                         </div>
                                         <div className="space-y-1">
                                             <p className="font-bold text-white text-xs uppercase tracking-wider">Tech Stack</p>
-                                            <p className="text-primary/90 line-clamp-1">{project.techStack}</p>
+                                            <p className="text-[#A67B5B] line-clamp-1">{project.techStack}</p>
                                         </div>
                                     </CardDescription>
                                 </CardHeader>
@@ -126,7 +139,7 @@ export function Projects() {
                                     </Button>
                                     <Button
                                         size="sm"
-                                        className="flex-1 shadow-lg shadow-primary/20"
+                                        className="flex-1 shadow-lg shadow-[#A67B5B]/20 bg-[#A67B5B] hover:bg-[#8B6542] text-white"
                                         onClick={(e) => {
                                             e.stopPropagation();
                                             if (project.demo !== "#") window.open(project.demo, "_blank");

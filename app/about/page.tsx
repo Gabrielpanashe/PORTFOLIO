@@ -19,6 +19,7 @@ export default function AboutPage() {
                 title="My"
                 gradientText="Journey"
                 subtitle="A snapshot of my education, experience, and professional growth in the world of technology."
+                accentColor="brown"
             />
             <About />
         </div>

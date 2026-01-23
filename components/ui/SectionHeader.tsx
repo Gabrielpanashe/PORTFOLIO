@@ -7,9 +7,16 @@ interface SectionHeaderProps {
     subtitle?: string;
     gradientText?: string;
     className?: string;
+    accentColor?: "gradient" | "brown";
 }
 
-export function SectionHeader({ title, subtitle, gradientText, className = "" }: SectionHeaderProps) {
+export function SectionHeader({
+    title,
+    subtitle,
+    gradientText,
+    className = "",
+    accentColor = "gradient"
+}: SectionHeaderProps) {
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -18,8 +25,12 @@ export function SectionHeader({ title, subtitle, gradientText, className = "" }:
             transition={{ duration: 0.6 }}
             className={`text-center mb-16 ${className}`}
         >
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4 tracking-tight">
-                {title} {gradientText && <span className="gradient-text">{gradientText}</span>}
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 tracking-tight uppercase">
+                {title} {gradientText && (
+                    <span className={accentColor === "gradient" ? "gradient-text" : "text-[#A67B5B]"}>
+                        {gradientText}
+                    </span>
+                )}
             </h2>
             {subtitle && (
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">

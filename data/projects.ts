@@ -11,6 +11,7 @@ export interface Project {
     slug: string;
     status?: string;
     coverImage: string;
+    altText: string;
 }
 
 export const projects: Project[] = [
@@ -26,6 +27,7 @@ export const projects: Project[] = [
         demo: "https://hccfrontend.up.railway.app/login",
         category: "Full-Stack",
         coverImage: "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80&w=800",
+        altText: "Dashboard visualization of billboard management system showing analytics and inventory tracking.",
     },
     {
         title: "AI Face Powered System",
@@ -39,6 +41,7 @@ export const projects: Project[] = [
         demo: "https://demo.example.com",
         category: "AI/ML",
         coverImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
+        altText: "High-tech facial recognition interface with scanning points on a human face.",
     },
     {
         title: "Doctor Assistant AI",
@@ -47,12 +50,13 @@ export const projects: Project[] = [
         purpose: "To increase precision medication using sentiment analysis to understand patient feedback and emotional state.",
         problem: "Analyzes patient drug feedback and emotional feelings to help doctors suggest the real medication that every individual truly needs.",
         techStack: "Next.js, Python, LangChain, RAG, OpenAI API",
-        status: "In Development",
+        status: "Research Project Under Development",
         tags: ["Next.js", "Python", "LLMs", "RAG", "Healthcare"],
         github: "https://github.com/Gabrielpanashe/doctor-ai",
         demo: "#",
         category: "AI/ML",
         coverImage: "https://images.unsplash.com/photo-1576091160550-217359f48f4c?auto=format&fit=crop&q=80&w=800",
+        altText: "AI medical assistant showing diagnostic data and patient sentiment analysis on a tablet.",
     },
     {
         title: "School Management System",
@@ -63,9 +67,10 @@ export const projects: Project[] = [
         techStack: "FastAPI, Supabase, PostgreSQL, Next.js",
         status: "In Development",
         tags: ["FastAPI", "Supabase", "PostgreSQL", "Next.js", "ERP"],
-        github: "#",
+        github: "https://github.com/Gabrielpanashe/school-management-system",
         demo: "#",
         category: "Full-Stack",
         coverImage: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=800",
+        altText: "Modern school campus building representing a digitalized school management system.",
     },
 ];

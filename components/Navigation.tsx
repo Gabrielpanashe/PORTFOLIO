@@ -42,12 +42,12 @@ export function Navigation() {
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <Link href="/" className="group flex items-center gap-2">
-                        <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center font-black text-xl shadow-lg shadow-primary/30 group-hover:rotate-6 transition-transform">
+                        <div className="w-10 h-10 rounded-xl bg-[#A67B5B] flex items-center justify-center font-black text-xl shadow-lg shadow-[#A67B5B]/30 group-hover:rotate-6 transition-transform text-white">
                             G
                         </div>
                         <div className="flex flex-col leading-none">
-                            <span className="text-lg font-black tracking-tighter text-white">PANASHE</span>
-                            <span className="text-[10px] font-bold tracking-[0.2em] text-primary/80 uppercase mt-0.5">Computer Engineer</span>
+                            <span className="text-lg font-black tracking-tighter text-white uppercase">PANASHE</span>
+                            <span className="text-[10px] font-bold tracking-[0.2em] text-[#A67B5B]/80 uppercase mt-0.5">Systems Engineer</span>
                         </div>
                     </Link>
 
@@ -56,24 +56,13 @@ export function Navigation() {
                         <div className="flex items-center gap-4">
                             {navItems.map((item, index) => {
                                 const isActive = pathname === item.href;
-                                const colors = [
-                                    "hover:bg-blue-500/20 hover:border-blue-500/50 hover:text-blue-400 active:bg-blue-600/30",
-                                    "hover:bg-purple-500/20 hover:border-purple-500/50 hover:text-purple-400 active:bg-purple-600/30",
-                                    "hover:bg-emerald-500/20 hover:border-emerald-500/50 hover:text-emerald-400 active:bg-emerald-600/30",
-                                    "hover:bg-orange-500/20 hover:border-orange-500/50 hover:text-orange-400 active:bg-orange-600/30",
-                                ];
-                                const activeColors = [
-                                    "bg-blue-500/20 border-blue-500/50 text-blue-400 shadow-blue-500/20",
-                                    "bg-purple-500/20 border-purple-500/50 text-purple-400 shadow-purple-500/20",
-                                    "bg-emerald-500/20 border-emerald-500/50 text-emerald-400 shadow-emerald-500/20",
-                                    "bg-orange-500/20 border-orange-500/50 text-orange-400 shadow-orange-500/20",
-                                ];
-
                                 return (
                                     <Link
                                         key={index}
                                         href={item.href}
-                                        className={`text-xs font-black transition-all px-4 py-2.5 rounded-2xl border flex items-center justify-center relative group isolate overflow-hidden shadow-[0_4px_0_0_rgba(0,0,0,0.3)] hover:shadow-[0_2px_0_0_rgba(0,0,0,0.3)] hover:translate-y-[2px] active:translate-y-[4px] active:shadow-none uppercase tracking-widest ${isActive ? activeColors[index % activeColors.length] : `bg-white/5 text-muted-foreground border-white/5 ${colors[index % colors.length]}`
+                                        className={`text-xs font-black transition-all px-4 py-2.5 rounded-2xl border flex items-center justify-center relative group isolate overflow-hidden shadow-[0_4px_0_0_rgba(0,0,0,0.3)] hover:shadow-[0_2px_0_0_rgba(0,0,0,0.3)] hover:translate-y-[2px] active:translate-y-[4px] active:shadow-none uppercase tracking-widest ${isActive
+                                            ? "bg-[#A67B5B]/20 border-[#A67B5B]/50 text-[#A67B5B] shadow-[#A67B5B]/20"
+                                            : "bg-white/5 text-muted-foreground border-white/5 hover:bg-[#A67B5B]/20 hover:border-[#A67B5B]/50 hover:text-[#A67B5B] active:bg-[#A67B5B]/30"
                                             }`}
                                     >
                                         <span className="relative z-10">{item.label}</span>
@@ -82,7 +71,7 @@ export function Navigation() {
                                 );
                             })}
                         </div>
-                        <Button size="sm" asChild className="rounded-2xl px-8 h-12 font-black uppercase tracking-widest bg-primary hover:bg-primary/90 text-white shadow-[0_5px_0_0_hsl(25,35,35%)] hover:shadow-[0_2px_0_0_hsl(25,35,35%)] hover:translate-y-[3px] active:translate-y-[5px] active:shadow-none transition-all">
+                        <Button size="sm" asChild className="rounded-2xl px-8 h-12 font-black uppercase tracking-widest bg-[#A67B5B] hover:bg-[#8B6542] text-white shadow-[0_5px_0_0_#8B6542] hover:shadow-[0_2px_0_0_#8B6542] hover:translate-y-[3px] active:translate-y-[5px] active:shadow-none transition-all">
                             <Link href="/contact">Hire Me</Link>
                         </Button>
                     </div>
@@ -118,13 +107,13 @@ export function Navigation() {
                                     key={index}
                                     href={item.href}
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className={`block text-xl font-bold transition-all ${pathname === item.href ? "text-primary translate-x-2" : "text-muted-foreground hover:text-white"
+                                    className={`block text-xl font-bold transition-all ${pathname === item.href ? "text-[#A67B5B] translate-x-2" : "text-muted-foreground hover:text-white"
                                         }`}
                                 >
                                     {item.label}
                                 </Link>
                             ))}
-                            <Button className="w-full rounded-2xl py-6 text-base font-bold" asChild>
+                            <Button className="w-full rounded-2xl py-6 text-base font-bold bg-[#A67B5B] hover:bg-[#8B6542] text-white" asChild>
                                 <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
                                     Let&apos;s Build Together
                                 </Link>

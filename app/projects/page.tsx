@@ -18,6 +18,7 @@ export default function ProjectsPage() {
                 title="Featured"
                 gradientText="Projects"
                 subtitle="A deep dive into the systems I've built, ranging from AI applications to complex full-stack platforms."
+                accentColor="brown"
             />
             <Projects />
         </div>
