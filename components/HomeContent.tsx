@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Hero } from "@/components/sections/Hero";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, Code2, Brain, Shield } from "lucide-react";
+import { ArrowRight, Code2, Brain, Shield, TrendingDown, ShieldAlert } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -256,6 +256,58 @@ export function HomeContent() {
                                 </div>
                             </div>
                         </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.25 }}
+                            className="group relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-white/[0.03] border border-white/5 p-1 cursor-pointer"
+                            onClick={() => router.push('/projects/loan-default-prediction')}
+                        >
+                            <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            <div className="relative h-full w-full rounded-[2.2rem] overflow-hidden bg-black/40 flex flex-col justify-end p-6">
+                                <div className="absolute inset-0 z-0">
+                                    <Image
+                                        src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=800"
+                                        alt="Loan Default Prediction"
+                                        fill
+                                        className="object-cover grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-50 transition-all duration-700"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+                                </div>
+                                <div className="relative z-10 transition-transform duration-500 group-hover:-translate-y-2">
+                                    <div className="flex items-center gap-3 mb-3">
+                                        <TrendingDown className="h-5 w-5 text-amber-400" />
+                                        <div className="flex flex-col">
+                                            <p className="text-amber-400 font-bold text-[10px] tracking-widest uppercase">FinTech AI</p>
+                                        </div>
+                                    </div>
+                                    <h3 className="text-xl font-black text-white mb-2 uppercase tracking-tighter">Loan Default AI</h3>
+                                    <div className="text-muted-foreground text-[10px] space-y-1 mb-4 uppercase tracking-tight font-medium">
+                                        <p><span className="text-white font-bold">Problem:</span> High Default Rates.</p>
+                                        <p><span className="text-white font-bold">Solution:</span> Risk Prediction.</p>
+                                        <p><span className="text-amber-400 font-bold">Stack:</span> FastAPI, SMOTE.</p>
+                                    </div>
+                                    <div className="flex items-center gap-2 mt-auto">
+                                        <Button
+                                            variant="outline" size="sm" className="h-8 rounded-xl border-white/10 hover:bg-white/10 text-[10px]"
+                                            onClick={(e) => { e.stopPropagation(); window.open('#', '_blank'); }}
+                                        >
+                                            Source
+                                        </Button>
+                                        <Button
+                                            size="sm" className="h-8 rounded-xl bg-primary hover:bg-primary/90 text-white shadow-lg text-[10px]"
+                                            onClick={(e) => { e.stopPropagation(); }}
+                                        >
+                                            Live
+                                        </Button>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+
+
                     </div>
                 </div>
             </section>

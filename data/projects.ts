@@ -73,4 +73,20 @@ export const projects: Project[] = [
         coverImage: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=800",
         altText: "Modern school campus building representing a digitalized school management system.",
     },
+    {
+        title: "Loan Default Prediction",
+        slug: "loan-default-prediction",
+        description: "An ML-powered system to predict loan defaults and assess credit risk.",
+        purpose: "To assist financial institutions in minimizing risk by accurately identifying potential loan defaulters.",
+        problem: "Addressed the high rate of non-performing loans due to inadequate credit assessment methods.",
+        techStack: "Streamlit, FastAPI, Random Forest, SMOTE, Docker",
+        tags: ["Streamlit", "FastAPI", "Machine Learning", "Docker", "SMOTE"],
+        status: "Production Ready", // Updated
+        github: "https://github.com/Gabrielpanashe/Loan_Default_Prediction-", // Using the provided link
+        demo: "#",
+        category: "AI/ML",
+        coverImage: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=800",
+        altText: "Data visualization of credit risk assessment and financial analytics.",
+    },
+
 ];
