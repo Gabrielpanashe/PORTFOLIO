@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 
+
 const roboto = Roboto({
   weight: ["300", "400", "500", "700", "900"],
   variable: "--font-roboto",
@@ -10,12 +11,13 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://panashechandiwana.com"),
   title: {
     default: "Gabriel Panashe | Computer Engineer & AI Developer",
     template: "%s | Gabriel Panashe",
   },
-  description: "Solution-oriented Computer Engineer and AI Developer specializing in autonomous agents, biometric security, and scalable full-stack architectures. Transforming complex problems into high-performance digital systems.",
-  keywords: ["Computer Engineer", "AI Developer", "Full-Stack Developer", "Machine Learning", "FastAPI", "Next.js", "Python", "Computer Vision", "Biometrics", "Software Engineering South Africa", "Gabriel Panashe Chandiwana"],
+  description: "Solution-oriented Computer Engineer and AI Developer specializing in autonomous agents, biometric security, clinical decision support systems, and scalable full-stack architectures. Based in Zimbabwe and South Africa.",
+  keywords: ["Computer Engineer", "AI Developer", "Full-Stack Developer", "Machine Learning", "FastAPI", "Next.js", "Python", "Computer Vision", "Biometrics", "Clinical Decision Support", "SE-CDSS", "Healthcare AI", "Software Engineering South Africa", "Software Engineering Zimbabwe", "Gabriel Panashe Chandiwana"],
   authors: [{ name: "Gabriel Panashe M Chandiwana" }],
   creator: "Gabriel Panashe M Chandiwana",
   openGraph: {

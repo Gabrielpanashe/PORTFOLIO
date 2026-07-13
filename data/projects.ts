@@ -16,20 +16,6 @@ export interface Project {
 
 export const projects: Project[] = [
     {
-        title: "Billboard Management System",
-        slug: "billboard-management",
-        description: "A centralized platform to manage municipal billboard inventory and revenue.",
-        purpose: "To automate the tracking and management of billboard assets for local government councils.",
-        problem: "Addressed revenue leakages, manual record-keeping inefficiencies, and lack of transparency in city council revenue collection.",
-        techStack: "Next.js, FastAPI, PostgreSQL, Prisma, Tailwind CSS",
-        tags: ["Next.js", "FastAPI", "PostgreSQL", "Financial Systems"],
-        github: "https://github.com/lordskyzw/billboardHot100",
-        demo: "https://hccfrontend.up.railway.app/login",
-        category: "Full-Stack",
-        coverImage: "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80&w=800",
-        altText: "Dashboard visualization of billboard management system showing analytics and inventory tracking.",
-    },
-    {
         title: "AI Face Powered System",
         slug: "face-access-system",
         description: "Advanced biometric security system with real-time recognition.",
@@ -44,15 +30,15 @@ export const projects: Project[] = [
         altText: "High-tech facial recognition interface with scanning points on a human face.",
     },
     {
-        title: "Doctor Assistant AI",
-        slug: "doctor-ai",
+        title: "SE-CDSS (Clinical Decision Support System)",
+        slug: "se-cdss",
         description: "Intelligent diagnosis support system for medical professionals.",
-        purpose: "To increase precision medication using sentiment analysis to understand patient feedback and emotional state.",
+        purpose: "To design and implement a precision medicine clinical decision support system that assists doctors in recommending the most effective medication for a patient's condition while minimizing adverse effects by integrating clinical guidelines, patient EHR history, and sentiment analysis of patient-report feedback.",
         problem: "Analyzes patient drug feedback and emotional feelings to help doctors suggest the real medication that every individual truly needs.",
-        techStack: "Next.js, Python, LangChain, RAG, OpenAI API",
+        techStack: "Next.js, Python, NLP, Sentiment Analysis",
         status: "Research Project Under Development",
-        tags: ["Next.js", "Python", "LLMs", "RAG", "Healthcare"],
-        github: "https://github.com/Gabrielpanashe/doctor-ai",
+        tags: ["Next.js", "Python", "NLP", "Healthcare"],
+        github: "https://github.com/Gabrielpanashe/SE-CDSS",
         demo: "#",
         category: "AI/ML",
         coverImage: "https://images.unsplash.com/photo-1576091160550-217359f48f4c?auto=format&fit=crop&q=80&w=800",
@@ -81,8 +67,8 @@ export const projects: Project[] = [
         problem: "Addressed the high rate of non-performing loans due to inadequate credit assessment methods.",
         techStack: "Streamlit, FastAPI, Random Forest, SMOTE, Docker",
         tags: ["Streamlit", "FastAPI", "Machine Learning", "Docker", "SMOTE"],
-        status: "Production Ready", // Updated
-        github: "https://github.com/Gabrielpanashe/Loan_Default_Prediction-", // Using the provided link
+        status: "Production Ready",
+        github: "https://github.com/Gabrielpanashe/Loan_Default_Prediction-",
         demo: "#",
         category: "AI/ML",
         coverImage: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=800",

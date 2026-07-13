@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Mail, Github, Linkedin, MapPin, Phone } from "lucide-react";
+import { Mail, Github, Linkedin, MapPin, Phone, MessageSquare } from "lucide-react";
 
 const contactMethods = [
     {
@@ -39,6 +39,13 @@ const contactMethods = [
         value: "+263 776 877 873",
         href: "tel:+263776877873",
         color: "primary"
+    },
+    {
+        icon: MessageSquare,
+        label: "WhatsApp",
+        value: "+263 776 877 873",
+        href: "https://wa.me/263776877873",
+        color: "secondary"
     }
 ];
 

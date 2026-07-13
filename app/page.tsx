@@ -3,7 +3,7 @@ import { HomeContent } from "@/components/HomeContent";
 
 export const metadata: Metadata = {
   title: "G. Panashe | Systems Engineering, AI & Full-Stack Development",
-  description: "Explore the portfolio of Gabriel Panashe, a Computer Engineering specialist building intelligent AI systems, secure architectures, and high-performance digital solutions. Zimbabwe & South Africa based.",
+  description: "Explore the portfolio of Gabriel Panashe, a Computer Engineering specialist building intelligent AI systems, SE-CDSS clinical decision support, secure architectures, and high-performance digital solutions. Zimbabwe & South Africa based.",
   openGraph: {
     title: "G. Panashe Chandiwana | Engineering with Purpose",
     description: "Discover high-performance systems from autonomous AI agents to enterprise full-stack platforms. Professional engineering portfolio of Gabriel Panashe.",

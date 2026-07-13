@@ -4,10 +4,11 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export const metadata: Metadata = {
     title: "Contact | Gabriel Panashe",
-    description: "Get in touch with Gabriel Panashe for collaborations, opportunities, or technical inquiries.",
+    description: "Contact Gabriel Panashe for collaborations, opportunities, or technical inquiries. Email, GitHub, LinkedIn, and WhatsApp available.",
     openGraph: {
         title: "Contact | Gabriel Panashe",
-        description: "Have a question or want to work together? I'm always looking for new opportunities and creative collaborations.",
+        description: "Have a question or want to work together? Reach out via email, LinkedIn, or WhatsApp.",
+        url: "https://panashechandiwana.com/contact",
     },
 };
 

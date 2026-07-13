@@ -127,7 +127,7 @@ export function Footer() {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-white/10 flex justify-center">
                     <p className="text-sm text-muted-foreground font-medium text-center">
-                        © 2025 <span className="text-white">Gabriel Panashe Chandiwana</span>. All rights reserved.
+                        © {currentYear} <span className="text-white">Gabriel Panashe Chandiwana</span>. All rights reserved.
                     </p>
                 </div>
             </div>

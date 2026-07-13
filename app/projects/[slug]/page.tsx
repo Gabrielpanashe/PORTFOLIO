@@ -25,10 +25,11 @@ export async function generateMetadata({ params }: Props) {
 
     return {
         title: `${project.title} | ${project.category} Project by Gabriel Panashe`,
-        description: `${project.description} Solve ${project.problem.toLowerCase()}`,
+        description: `${project.description} ${project.purpose}`,
         openGraph: {
             title: `${project.title} | Gabriel Panashe Engineering`,
             description: project.description,
+            url: `https://panashechandiwana.com/projects/${project.slug}`,
             images: [
                 {
                     url: project.coverImage,
@@ -106,12 +107,12 @@ export default async function ProjectPage({ params }: Props) {
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10 pb-24">
-                {/* Doctor AI Specific Dashboard - Kept as requested */}
-                {project.slug === "doctor-ai" && (
+                {/* SE-CDSS Specific Dashboard - Kept as requested */}
+                {project.slug === "se-cdss" && (
                     <div className="w-full aspect-video rounded-[2rem] sm:rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl shadow-[#A67C52]/5 relative group mb-20 bg-black">
                         <Image
-                            src="/doctor-ai.png"
-                            alt="Doctor AI Dashboard Preview"
+                            src={project.coverImage}
+                            alt="SE-CDSS Dashboard Preview"
                             fill
                             className="object-cover transition-all duration-700 group-hover:scale-105"
                             priority
@@ -133,9 +134,7 @@ export default async function ProjectPage({ params }: Props) {
                                 <div className="h-px bg-[#A67C52]/20 flex-grow" />
                             </div>
                             <p className="text-2xl sm:text-4xl text-white font-medium leading-tight tracking-tight">
-                                {project.slug === "doctor-ai"
-                                    ? "The main aim of this research is to design and implement a precision medicine clinical decision support system that assists doctors in recommending the most effective medication for a patient’s condition while minimizing adverse effects by integrating clinical guidelines, patients EHR history and sentiment analysis of patient-report feedback."
-                                    : project.purpose}
+                                {project.purpose}
                             </p>
                         </section>
 

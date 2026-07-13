@@ -4,10 +4,11 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export const metadata: Metadata = {
     title: "Featured Projects | Gabriel Panashe",
-    description: "Explore the systems built by Gabriel Panashe, ranging from AI applications to complex full-stack platforms and security systems.",
+    description: "Explore systems built by Gabriel Panashe — AI face recognition, SE-CDSS clinical decision support, school ERP, and loan default prediction platforms.",
     openGraph: {
         title: "Featured Projects | Gabriel Panashe",
-        description: "A deep dive into the systems I've built, ranging from AI applications to complex full-stack platforms.",
+        description: "A deep dive into AI-powered systems and full-stack platforms, including SE-CDSS, biometric security, and enterprise ERP solutions.",
+        url: "https://panashechandiwana.com/projects",
     },
 };
 

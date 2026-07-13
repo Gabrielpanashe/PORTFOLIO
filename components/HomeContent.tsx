@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Hero } from "@/components/sections/Hero";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, Code2, Brain, Shield, TrendingDown, ShieldAlert } from "lucide-react";
+import { ArrowRight, Code2, Brain, Shield, TrendingDown } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -68,54 +68,6 @@ export function HomeContent() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             className="group relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-white/[0.03] border border-white/5 p-1 cursor-pointer"
-                            onClick={() => router.push('/projects/billboard-management')}
-                        >
-                            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                            <div className="relative h-full w-full rounded-[2.2rem] overflow-hidden bg-black/40 flex flex-col justify-end p-6">
-                                <div className="absolute inset-0 z-0">
-                                    <Image
-                                        src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80&w=800"
-                                        alt="Billboard Management"
-                                        fill
-                                        className="object-cover grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-50 transition-all duration-700"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                                </div>
-                                <div className="relative z-10 transition-transform duration-500 group-hover:-translate-y-2">
-                                    <div className="flex items-center gap-3 mb-3">
-                                        <Code2 className="h-5 w-5 text-primary" />
-                                        <p className="text-primary font-bold text-xs tracking-widest uppercase">Full-Stack System</p>
-                                    </div>
-                                    <h3 className="text-xl font-black text-white mb-2 uppercase tracking-tighter">Billboard Management</h3>
-                                    <div className="text-muted-foreground text-[10px] space-y-1 mb-4 uppercase tracking-tight font-medium">
-                                        <p><span className="text-white font-bold">Problem:</span> Revenue leakages.</p>
-                                        <p><span className="text-white font-bold">Solution:</span> Automated Tracking.</p>
-                                        <p><span className="text-primary font-bold">Stack:</span> Next.js, FastAPI.</p>
-                                    </div>
-                                    <div className="flex items-center gap-2 mt-auto">
-                                        <Button
-                                            variant="outline" size="sm" className="h-8 rounded-xl border-white/10 hover:bg-white/10 text-[10px]"
-                                            onClick={(e) => { e.stopPropagation(); window.open('https://github.com/lordskyzw/billboardHot100', '_blank'); }}
-                                        >
-                                            Source
-                                        </Button>
-                                        <Button
-                                            size="sm" className="h-8 rounded-xl bg-primary hover:bg-primary/90 text-white shadow-lg text-[10px]"
-                                            onClick={(e) => { e.stopPropagation(); window.open('https://hccfrontend.up.railway.app/login', '_blank'); }}
-                                        >
-                                            Live
-                                        </Button>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.1 }}
-                            className="group relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-white/[0.03] border border-white/5 p-1 cursor-pointer"
                             onClick={() => router.push('/projects/face-access-system')}
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -164,14 +116,14 @@ export function HomeContent() {
                             viewport={{ once: true }}
                             transition={{ delay: 0.15 }}
                             className="group relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-white/[0.03] border border-white/5 p-1 cursor-pointer"
-                            onClick={() => router.push('/projects/doctor-ai')}
+                            onClick={() => router.push('/projects/se-cdss')}
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             <div className="relative h-full w-full rounded-[2.2rem] overflow-hidden bg-black/40 flex flex-col justify-end p-6">
                                 <div className="absolute inset-0 z-0">
                                     <Image
                                         src="https://images.unsplash.com/photo-1576091160550-217359f48f4c?auto=format&fit=crop&q=80&w=800"
-                                        alt="Doctor AI Assistant"
+                                        alt="SE-CDSS Clinical Decision Support System"
                                         fill
                                         className="object-cover grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-50 transition-all duration-700"
                                     />
@@ -185,16 +137,16 @@ export function HomeContent() {
                                             <span className="text-[8px] text-red-300/80 font-bold uppercase animate-pulse">Research Project</span>
                                         </div>
                                     </div>
-                                    <h3 className="text-xl font-black text-white mb-2 uppercase tracking-tighter">Doctor AI Assistant</h3>
+                                    <h3 className="text-xl font-black text-white mb-2 uppercase tracking-tighter">SE-CDSS</h3>
                                     <div className="text-muted-foreground text-[10px] space-y-1 mb-4 uppercase tracking-tight font-medium">
                                         <p><span className="text-white font-bold">Problem:</span> Precision Medication.</p>
                                         <p><span className="text-white font-bold">Solution:</span> Sentiment Analysis.</p>
-                                        <p><span className="text-red-400 font-bold">Stack:</span> LangChain, OpenAI.</p>
+                                        <p><span className="text-red-400 font-bold">Stack:</span> NLP, Python.</p>
                                     </div>
                                     <div className="flex items-center gap-2 mt-auto">
                                         <Button
                                             variant="outline" size="sm" className="h-8 rounded-xl border-white/10 hover:bg-white/10 text-[10px]"
-                                            onClick={(e) => { e.stopPropagation(); window.open('https://github.com/Gabrielpanashe/doctor-ai', '_blank'); }}
+                                            onClick={(e) => { e.stopPropagation(); window.open('https://github.com/Gabrielpanashe/SE-CDSS', '_blank'); }}
                                         >
                                             Source
                                         </Button>
@@ -292,7 +244,7 @@ export function HomeContent() {
                                     <div className="flex items-center gap-2 mt-auto">
                                         <Button
                                             variant="outline" size="sm" className="h-8 rounded-xl border-white/10 hover:bg-white/10 text-[10px]"
-                                            onClick={(e) => { e.stopPropagation(); window.open('#', '_blank'); }}
+                                            onClick={(e) => { e.stopPropagation(); window.open('https://github.com/Gabrielpanashe/Loan_Default_Prediction-', '_blank'); }}
                                         >
                                             Source
                                         </Button>
