@@ -14,7 +14,6 @@ import {
     Sparkles,
     Network
 } from "lucide-react";
-import { SectionHeader } from "@/components/ui/SectionHeader";
 
 const skillCategories = [
     {
@@ -148,12 +147,6 @@ export function Skills() {
     return (
         <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8 border-t border-white/5">
             <div className="max-w-7xl mx-auto">
-                <SectionHeader
-                    title="TECHNICAL"
-                    gradientText="TOOLKIT."
-                    subtitle="A comprehensive overview of my technical expertise and the tools I use to build scalable systems."
-                    accentColor="brown"
-                />
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"

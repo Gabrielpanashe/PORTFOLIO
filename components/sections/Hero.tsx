@@ -64,7 +64,7 @@ export function Hero() {
                         initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
                         animate={{ opacity: 1, scale: 1, rotate: 0 }}
                         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] as any }}
-                        className="relative w-full max-w-[320px] sm:max-w-[420px] aspect-[4/5] lg:order-2"
+                        className="relative w-full max-w-[320px] sm:max-w-[420px] lg:max-w-none lg:w-[420px] lg:flex-shrink-0 aspect-[4/5] lg:order-2"
                     >
                         <div className="relative h-full w-full rounded-[3rem] overflow-hidden border-2 border-white/10 shadow-3xl group bg-black/40">
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10" />
@@ -94,11 +94,11 @@ export function Hero() {
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
-                        className="flex-1 text-center lg:order-1 flex flex-col items-center"
+                        className="flex-1 min-w-0 text-center lg:order-1 flex flex-col items-center"
                     >
                         <motion.div variants={itemVariants} className="mb-6 flex flex-col items-center">
                             <h2 className="text-primary font-bold text-lg sm:text-xl italic uppercase tracking-widest">Hi, I&apos;m</h2>
-                            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] mt-2 flex flex-col sm:flex-row sm:gap-4 justify-center">
+                            <h1 className="text-5xl sm:text-7xl xl:text-8xl font-black tracking-tighter leading-[0.9] mt-2 flex flex-col sm:flex-row flex-wrap sm:gap-4 justify-center">
                                 <span className="text-white uppercase">PANASHE M.</span>
                                 <span className="gradient-text uppercase">CHANDIWANA.</span>
                             </h1>

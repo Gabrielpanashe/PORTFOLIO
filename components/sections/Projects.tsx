@@ -5,7 +5,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink, Code2, Shield, Brain, Laptop, TrendingDown, HeartPulse, Cpu } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { SectionHeader } from "@/components/ui/SectionHeader";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
@@ -48,12 +47,6 @@ export function Projects() {
     return (
         <section id="projects" className="py-24 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-                <SectionHeader
-                    title="FEATURED"
-                    gradientText="PROJECTS."
-                    subtitle="A collection of high-performance systems and intelligent solutions."
-                    accentColor="brown"
-                />
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
