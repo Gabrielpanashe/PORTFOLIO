@@ -151,7 +151,7 @@ export function Hero() {
                             <div className="flex items-center gap-6">
                                 {[
                                     { icon: Github, href: "https://github.com/Gabrielpanashe", label: "GitHub" },
-                                    { icon: Linkedin, href: "https://www.linkedin.com/in/panashe-chandiwana-a102672ba/", label: "LinkedIn" },
+                                    { icon: Linkedin, href: "https://www.linkedin.com/in/panashe-m-chandiwana-a102672ba/", label: "LinkedIn" },
                                     { icon: Mail, href: "mailto:panashechandiwana11@gmail.com", label: "Email" },
                                     { icon: MessageSquare, href: "https://wa.me/263776877873", label: "WhatsApp" }
                                 ].map((social, i) => (

@@ -23,7 +23,7 @@ const contactMethods = [
         icon: Linkedin,
         label: "LinkedIn",
         value: "Panashe Chandiwana",
-        href: "https://www.linkedin.com/in/panashe-chandiwana-a102672ba/",
+        href: "https://www.linkedin.com/in/panashe-m-chandiwana-a102672ba/",
         color: "primary"
     },
     {

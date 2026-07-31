@@ -13,7 +13,7 @@ const socialLinks = [
     },
     {
         icon: Linkedin,
-        href: "https://www.linkedin.com/in/panashe-chandiwana-a102672ba/",
+        href: "https://www.linkedin.com/in/panashe-m-chandiwana-a102672ba/",
         label: "LinkedIn",
         color: "hover:text-[#A67B5B] group-hover:bg-[#A67B5B]/10"
     },
