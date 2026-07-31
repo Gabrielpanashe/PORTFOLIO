@@ -3,12 +3,12 @@ import { Projects } from "@/components/sections/Projects";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export const metadata: Metadata = {
-    title: "Featured Projects | Gabriel Panashe",
-    description: "Explore systems built by Gabriel Panashe — AI face recognition, SE-CDSS clinical decision support, school ERP, and loan default prediction platforms.",
+    title: "Featured Projects | Panashe Chandiwana",
+    description: "Explore systems built by Panashe M. Chandiwana — an explainable credit-risk platform, a clinical decision support system, biometric authentication, and more.",
     openGraph: {
-        title: "Featured Projects | Gabriel Panashe",
-        description: "A deep dive into AI-powered systems and full-stack platforms, including SE-CDSS, biometric security, and enterprise ERP solutions.",
-        url: "https://panashechandiwana.com/projects",
+        title: "Featured Projects | Panashe Chandiwana",
+        description: "A deep dive into AI-powered systems and full-stack platforms, including the Loan Risk Intelligence Platform, SE-CDSS, SilicaGuard, and Kazizi.",
+        url: "https://panashechandiwana.vercel.app/projects",
     },
 };
 

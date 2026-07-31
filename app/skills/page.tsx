@@ -3,12 +3,12 @@ import { Skills } from "@/components/sections/Skills";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export const metadata: Metadata = {
-    title: "Technical Expertise | Gabriel Panashe",
-    description: "The technical toolkit of Gabriel Panashe — AI/ML, full-stack development, cloud, DevOps, and cybersecurity for high-performance architectures.",
+    title: "Technical Expertise | Panashe Chandiwana",
+    description: "The technical toolkit of Panashe M. Chandiwana — AI and machine learning, backend and full-stack development, databases, DevOps, and networking.",
     openGraph: {
-        title: "Technical Expertise | Gabriel Panashe",
+        title: "Technical Expertise | Panashe Chandiwana",
         description: "Exploring my technical toolkit and the technologies I use to bring ideas to life.",
-        url: "https://panashechandiwana.com/skills",
+        url: "https://panashechandiwana.vercel.app/skills",
     },
 };
 

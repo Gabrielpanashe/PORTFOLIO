@@ -6,117 +6,119 @@ import {
     Code,
     Database,
     Cloud,
-    Shield,
     Cpu,
     Globe,
     Terminal,
-    Laptop
+    Laptop,
+    Layers,
+    Sparkles,
+    Network
 } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
 const skillCategories = [
     {
-        title: "AI & Machine Learning",
-        icon: Brain,
-        skills: [
-            "TensorFlow / PyTorch",
-            "Computer Vision",
-            "Natural Language Processing",
-            "Deep Learning",
-            "Model Deployment",
-            "MLOps"
-        ],
+        title: "Programming Languages",
+        icon: Code,
+        skills: ["Python", "Java", "C", "JavaScript", "TypeScript", "SQL", "PHP", "Rust"],
         theme: "primary"
     },
     {
-        title: "Frontend Development",
-        icon: Globe,
+        title: "Artificial Intelligence & Machine Learning",
+        icon: Brain,
         skills: [
-            "React / Next.js",
-            "TypeScript",
-            "Tailwind CSS",
-            "Framer Motion",
-            "Responsive Design",
-            "State Management"
+            "Machine Learning",
+            "Deep Learning",
+            "Natural Language Processing",
+            "Computer Vision",
+            "Large Language Models",
+            "Retrieval-Augmented Generation",
+            "Prompt Engineering",
+            "Explainable AI",
+            "Predictive Analytics",
+            "Classification",
+            "Feature Engineering",
+            "Sentiment Analysis",
+            "Anomaly Detection",
+            "Recommendation Systems",
+            "Model Evaluation"
         ],
         theme: "secondary"
+    },
+    {
+        title: "AI & Machine Learning Libraries",
+        icon: Layers,
+        skills: ["TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "NumPy", "SHAP", "LightGBM", "CatBoost", "LangChain", "Transformers"],
+        theme: "muted"
+    },
+    {
+        title: "Enterprise AI & Agentic Systems",
+        icon: Sparkles,
+        skills: [
+            "Enterprise AI Engineering",
+            "Agentic AI Systems",
+            "AI Workflow Automation",
+            "Claude AI",
+            "Claude Code",
+            "Agent Skills",
+            "Tool Integration",
+            "Prompt and Context Design",
+            "Responsible AI",
+            "AI-Assisted Process Engineering"
+        ],
+        theme: "primary"
     },
     {
         title: "Backend Development",
         icon: Terminal,
-        skills: [
-            "Node.js / Python",
-            "FastAPI / Express",
-            "RESTful APIs",
-            "GraphQL",
-            "Microservices",
-            "WebSockets"
-        ],
-        theme: "muted"
-    },
-    {
-        title: "Database & Storage",
-        icon: Database,
-        skills: [
-            "PostgreSQL / MongoDB",
-            "Redis",
-            "SQLite",
-            "Database Design",
-            "Query Optimization",
-            "Data Modeling"
-        ],
-        theme: "primary"
-    },
-    {
-        title: "Cloud & DevOps",
-        icon: Cloud,
-        skills: [
-            "Docker / Kubernetes",
-            "AWS / Vercel",
-            "CI/CD Pipelines",
-            "GitHub Actions",
-            "Infrastructure as Code",
-            "Monitoring"
-        ],
+        skills: ["FastAPI", "Flask", "REST API Development", "Authentication", "Role-Based Access Control", "API Integration", "Data Validation", "Backend Architecture"],
         theme: "secondary"
     },
     {
-        title: "Security",
-        icon: Shield,
+        title: "Frontend Development",
+        icon: Globe,
+        skills: ["React", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS", "Responsive Web Development", "Progressive Web Applications"],
+        theme: "muted"
+    },
+    {
+        title: "Databases & Data Technologies",
+        icon: Database,
+        skills: ["PostgreSQL", "MySQL", "SQLite", "Redis", "DuckDB", "Firebase", "Supabase", "Prisma", "Chroma", "Vector Databases"],
+        theme: "primary"
+    },
+    {
+        title: "DevOps & Deployment",
+        icon: Cloud,
+        skills: ["Docker", "Git", "GitHub", "Vercel", "Linux", "Google Colab", "Postman", "Environment Configuration", "Containerisation"],
+        theme: "secondary"
+    },
+    {
+        title: "Networking & IT Infrastructure",
+        icon: Network,
         skills: [
-            "Authentication (JWT)",
-            "Encryption",
-            "OWASP Best Practices",
-            "Secure APIs",
-            "Access Control",
-            "Penetration Testing"
+            "Network Administration",
+            "Switch Configuration",
+            "TCP/IP",
+            "Wi-Fi Troubleshooting",
+            "Network Monitoring",
+            "Wireshark",
+            "Zabbix",
+            "Hardware Troubleshooting",
+            "Operating-System Installation",
+            "IT Support"
         ],
         theme: "muted"
     },
     {
-        title: "Programming Languages",
-        icon: Code,
-        skills: [
-            "Python",
-            "JavaScript / TypeScript",
-            "C / C++",
-            "SQL",
-            "Bash",
-            "Java"
-        ],
+        title: "Embedded & Industrial Technologies",
+        icon: Cpu,
+        skills: ["Raspberry Pi", "OBD-II", "CAN Bus", "Embedded Systems", "Edge Computing", "Predictive Maintenance"],
         theme: "primary"
     },
     {
-        title: "Hardware & IoT",
-        icon: Cpu,
-        skills: [
-            "Raspberry Pi",
-            "Arduino",
-            "MQTT Protocol",
-            "Embedded Systems",
-            "Circuit Design",
-            "Sensor Integration"
-        ],
+        title: "Development Tools",
+        icon: Laptop,
+        skills: ["Visual Studio Code", "Jupyter Notebook", "Google Colab", "GitHub", "Postman", "Docker", "XAMPP"],
         theme: "secondary"
     }
 ];

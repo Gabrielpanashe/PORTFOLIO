@@ -1,7 +1,7 @@
 import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Github, ExternalLink, ArrowLeft, Code2, Shield, Brain, Laptop } from "lucide-react";
+import { Github, ExternalLink, ArrowLeft, Code2, Shield, Brain, Laptop, TrendingDown, HeartPulse, Cpu } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
@@ -24,12 +24,12 @@ export async function generateMetadata({ params }: Props) {
     if (!project) return { title: "Project Not Found" };
 
     return {
-        title: `${project.title} | ${project.category} Project by Gabriel Panashe`,
+        title: `${project.title} | Project by Panashe Chandiwana`,
         description: `${project.description} ${project.purpose}`,
         openGraph: {
-            title: `${project.title} | Gabriel Panashe Engineering`,
+            title: `${project.title} | Panashe Chandiwana`,
             description: project.description,
-            url: `https://panashechandiwana.com/projects/${project.slug}`,
+            url: `https://panashechandiwana.vercel.app/projects/${project.slug}`,
             images: [
                 {
                     url: project.coverImage,
@@ -51,12 +51,13 @@ export default async function ProjectPage({ params }: Props) {
     }
 
     const getIcon = (category: string) => {
-        switch (category) {
-            case "AI/ML": return <Brain className="h-12 w-12 text-primary" />;
-            case "Full-Stack": return <Code2 className="h-12 w-12 text-primary" />;
-            case "Security AI": return <Shield className="h-12 w-12 text-primary" />;
-            default: return <Laptop className="h-12 w-12 text-muted-foreground" />;
-        }
+        if (category.includes("Financial")) return <TrendingDown className="h-12 w-12 text-primary" />;
+        if (category.includes("Healthcare") || category.includes("Public Health")) return <HeartPulse className="h-12 w-12 text-primary" />;
+        if (category.includes("Machine Learning")) return <Brain className="h-12 w-12 text-primary" />;
+        if (category.includes("Computer Vision") || category.includes("Cybersecurity") || category.includes("Biometrics")) return <Shield className="h-12 w-12 text-primary" />;
+        if (category.includes("Embedded") || category.includes("Automotive")) return <Cpu className="h-12 w-12 text-primary" />;
+        if (category.includes("Full-Stack")) return <Code2 className="h-12 w-12 text-primary" />;
+        return <Laptop className="h-12 w-12 text-muted-foreground" />;
     };
 
     return (
@@ -175,14 +176,14 @@ export default async function ProjectPage({ params }: Props) {
                     <aside className="lg:col-span-4 space-y-8 sm:space-y-10 lg:sticky lg:top-10 h-fit">
                         {/* Action Buttons */}
                         <div className="flex flex-col gap-4">
-                            {project.demo !== "#" && (
+                            {project.demo && (
                                 <Button className="w-full rounded-xl bg-[#A67C52] hover:bg-[#8B6542] text-white shadow-lg shadow-[#A67C52]/20 h-14 font-bold text-base tracking-wide transition-all" asChild>
                                     <a href={project.demo} target="_blank" rel="noopener noreferrer">
                                         <ExternalLink className="mr-2 h-5 w-5" /> Visit Live Site
                                     </a>
                                 </Button>
                             )}
-                            {project.github !== "#" && (
+                            {project.github && (
                                 <Button variant="outline" className="w-full rounded-xl border-white/10 hover:bg-white/5 hover:border-[#A67C52]/30 hover:text-[#A67C52] h-14 font-bold text-base tracking-wide bg-transparent text-white transition-all" asChild>
                                     <a href={project.github} target="_blank" rel="noopener noreferrer">
                                         <Github className="mr-2 h-5 w-5" /> View Source Code

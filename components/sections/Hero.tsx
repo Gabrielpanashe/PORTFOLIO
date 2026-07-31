@@ -1,12 +1,32 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 import { Github, Linkedin, Mail, ArrowRight, Download, MessageSquare, MapPin } from "lucide-react";
 
+const rotatingRoles = [
+    "AI Engineer",
+    "Software Developer",
+    "Machine Learning Engineer",
+    "Full-Stack Developer",
+    "Backend Developer",
+    "Computer Engineer",
+    "Enterprise AI Engineer",
+];
+
 export function Hero() {
+    const [roleIndex, setRoleIndex] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setRoleIndex((prev) => (prev + 1) % rotatingRoles.length);
+        }, 2500);
+        return () => clearInterval(timer);
+    }, []);
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -50,7 +70,7 @@ export function Hero() {
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10" />
                             <Image
                                 src="/profile_new.jpg"
-                                alt="Gabriel Panashe"
+                                alt="Panashe M. Chandiwana"
                                 fill
                                 sizes="(max-width: 768px) 100vw, 420px"
                                 className="object-cover scale-110 group-hover:scale-105 transition-transform duration-1000"
@@ -59,8 +79,8 @@ export function Hero() {
 
                             {/* Floating Card Info */}
                             <div className="absolute bottom-8 left-8 right-8 z-20 backdrop-blur-md bg-white/10 border border-white/10 p-5 rounded-2xl transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">
-                                <p className="text-white text-xl font-black uppercase tracking-tight">G. Panashe</p>
-                                <p className="text-primary font-bold text-[10px] tracking-[0.2em] uppercase mt-1">Computer Engineer | Full-Stack Developer | AI</p>
+                                <p className="text-white text-xl font-black uppercase tracking-tight">Panashe M. Chandiwana</p>
+                                <p className="text-primary font-bold text-[10px] tracking-[0.2em] uppercase mt-1">Computer Engineering Graduate | Software Developer | AI Engineer</p>
                             </div>
                         </div>
 
@@ -79,17 +99,32 @@ export function Hero() {
                         <motion.div variants={itemVariants} className="mb-6 flex flex-col items-center">
                             <h2 className="text-primary font-bold text-lg sm:text-xl italic uppercase tracking-widest">Hi, I&apos;m</h2>
                             <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] mt-2 flex flex-col sm:flex-row sm:gap-4 justify-center">
-                                <span className="text-white uppercase">GABRIEL</span>
-                                <span className="gradient-text uppercase">PANASHE.</span>
+                                <span className="text-white uppercase">PANASHE M.</span>
+                                <span className="gradient-text uppercase">CHANDIWANA.</span>
                             </h1>
+                        </motion.div>
+
+                        <motion.div variants={itemVariants} className="h-8 mb-6 flex items-center justify-center">
+                            <AnimatePresence mode="wait">
+                                <motion.span
+                                    key={rotatingRoles[roleIndex]}
+                                    initial={{ opacity: 0, y: 8 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -8 }}
+                                    transition={{ duration: 0.4 }}
+                                    className="text-primary font-black text-sm sm:text-base tracking-[0.2em] uppercase"
+                                >
+                                    {rotatingRoles[roleIndex]}
+                                </motion.span>
+                            </AnimatePresence>
                         </motion.div>
 
                         <motion.p
                             variants={itemVariants}
                             className="text-lg sm:text-xl text-muted-foreground font-medium mb-10 max-w-xl mx-auto leading-relaxed text-center"
                         >
-                            Crafting <span className="text-white font-bold underline decoration-primary/40 underline-offset-4">intelligent systems</span> and
-                            high-performance architectures. Bridging the gap between Computer Engineering and Artificial Intelligence.
+                            I build <span className="text-white font-bold underline decoration-primary/40 underline-offset-4">intelligent, scalable</span>, and
+                            user-focused software systems that solve real-world challenges across healthcare, finance, enterprise technology, and industrial environments.
                         </motion.p>
 
                         {/* CTA Buttons - Mobile focused layout */}
@@ -98,16 +133,16 @@ export function Hero() {
                             className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 mb-12"
                         >
                             <Button size="lg" className="w-full sm:w-auto rounded-2xl px-10 h-16 text-lg font-black uppercase tracking-widest shadow-[0_6px_0_0_hsl(25,35,35%)] hover:translate-y-[2px] hover:shadow-[0_4px_0_0_hsl(25,35,35%)] active:translate-y-[6px] active:shadow-none transition-all bg-primary hover:bg-primary/95 text-white" asChild>
-                                <Link href="/contact">
-                                    Let&apos;s Talk
+                                <Link href="/projects">
+                                    View Projects
                                     <ArrowRight className="ml-3 h-5 w-5" />
                                 </Link>
                             </Button>
                             <Button variant="outline" size="lg" className="w-full sm:w-auto rounded-2xl px-10 h-16 text-lg font-black uppercase tracking-widest border-white/10 bg-white/5 hover:bg-white/10 transition-all text-white shadow-[0_6px_0_0_rgba(255,255,255,0.05)] hover:translate-y-[2px] hover:shadow-[0_4px_0_0_rgba(255,255,255,0.05)] active:translate-y-[6px] active:shadow-none" asChild>
-                                <Link href="/resume.pdf">
+                                <a href="/Panashe_Chandiwana_CV.pdf" download>
                                     <Download className="mr-3 h-5 w-5 text-primary" />
-                                    Resume
-                                </Link>
+                                    Download CV
+                                </a>
                             </Button>
                         </motion.div>
 
@@ -135,7 +170,7 @@ export function Hero() {
                             <div className="hidden sm:block h-8 w-px bg-white/10" />
                             <div className="flex items-center gap-2 text-muted-foreground px-4 py-2 bg-white/5 rounded-xl border border-white/5">
                                 <MapPin className="h-4 w-4 text-primary" />
-                                <span className="text-xs font-black uppercase tracking-widest">Harare, Zimbabwe</span>
+                                <span className="text-xs font-black uppercase tracking-widest">Highfield, Harare, Zimbabwe</span>
                             </div>
                         </motion.div>
                     </motion.div>

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Github, ExternalLink, Code2, Shield, Brain, Laptop } from "lucide-react";
+import { Github, ExternalLink, Code2, Shield, Brain, Laptop, TrendingDown, HeartPulse, Cpu } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { useRouter } from "next/navigation";
@@ -15,12 +15,13 @@ export function Projects() {
     const router = useRouter();
 
     const getIcon = (category: string) => {
-        switch (category) {
-            case "AI/ML": return <Brain className="h-6 w-6" />;
-            case "Full-Stack": return <Code2 className="h-6 w-6" />;
-            case "Security AI": return <Shield className="h-6 w-6" />;
-            default: return <Laptop className="h-6 w-6" />;
-        }
+        if (category.includes("Financial")) return <TrendingDown className="h-6 w-6" />;
+        if (category.includes("Healthcare") || category.includes("Public Health")) return <HeartPulse className="h-6 w-6" />;
+        if (category.includes("Machine Learning")) return <Brain className="h-6 w-6" />;
+        if (category.includes("Computer Vision") || category.includes("Cybersecurity") || category.includes("Biometrics")) return <Shield className="h-6 w-6" />;
+        if (category.includes("Embedded") || category.includes("Automotive")) return <Cpu className="h-6 w-6" />;
+        if (category.includes("Full-Stack")) return <Code2 className="h-6 w-6" />;
+        return <Laptop className="h-6 w-6" />;
     };
 
     const containerVariants = {
@@ -131,7 +132,7 @@ export function Projects() {
                                         className="flex-1 bg-white/5 border-white/10 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
                                         onClick={(e) => {
                                             e.stopPropagation();
-                                            if (project.github !== "#") window.open(project.github, "_blank");
+                                            if (project.github) window.open(project.github, "_blank");
                                         }}
                                     >
                                         <Github className="mr-2 h-4 w-4" />
@@ -142,7 +143,7 @@ export function Projects() {
                                         className="flex-1 shadow-lg shadow-[#A67B5B]/20 bg-[#A67B5B] hover:bg-[#8B6542] text-white"
                                         onClick={(e) => {
                                             e.stopPropagation();
-                                            if (project.demo !== "#") window.open(project.demo, "_blank");
+                                            if (project.demo) window.open(project.demo, "_blank");
                                         }}
                                     >
                                         <ExternalLink className="mr-2 h-4 w-4" />

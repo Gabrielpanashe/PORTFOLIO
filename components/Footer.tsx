@@ -13,7 +13,7 @@ const socialLinks = [
     },
     {
         icon: Linkedin,
-        href: "https://www.linkedin.com/in/panashe-chandiwana-a102672ba/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BOR0E%2BpdASMOcwFcd4sDySA%3D%3D",
+        href: "https://www.linkedin.com/in/panashe-chandiwana-a102672ba/",
         label: "LinkedIn",
         color: "hover:text-[#A67B5B] group-hover:bg-[#A67B5B]/10"
     },
@@ -42,25 +42,25 @@ export function Footer() {
                     <div className="lg:col-span-1">
                         <Link href="/" className="group flex items-center gap-3 mb-6">
                             <div className="w-12 h-12 rounded-2xl bg-[#A67B5B] flex items-center justify-center font-black text-2xl shadow-[0_5px_0_0_#8B6542] group-hover:translate-y-[2px] group-hover:shadow-[0_3px_0_0_#8B6542] active:translate-y-[4px] active:shadow-none transition-all text-white">
-                                G
+                                P
                             </div>
                             <div className="flex flex-col leading-none">
                                 <span className="text-xl font-black tracking-tighter text-white uppercase">PANASHE</span>
-                                <span className="text-xs font-bold tracking-[0.2em] text-[#A67B5B]/80 uppercase mt-1">Systems Engineer</span>
+                                <span className="text-xs font-bold tracking-[0.2em] text-[#A67B5B]/80 uppercase mt-1">AI Engineer</span>
                             </div>
                         </Link>
                         <p className="text-base text-muted-foreground leading-relaxed mb-6">
-                            Engineering intelligent systems with a focus on AI, scalability, and security.
+                            Building intelligent systems for real-world impact.
                         </p>
                         <div className="flex flex-col gap-3">
                             <div className="flex items-center gap-3 text-muted-foreground">
                                 <MapPin className="h-4 w-4 text-[#A67B5B]" />
-                                <span className="text-sm font-bold uppercase tracking-widest text-white/80">Harare, Zimbabwe</span>
+                                <span className="text-sm font-bold uppercase tracking-widest text-white/80">Highfield, Harare, Zimbabwe</span>
                             </div>
-                            <div className="flex items-center gap-3 text-muted-foreground">
+                            <a href="tel:+263776877873" className="flex items-center gap-3 text-muted-foreground hover:text-white transition-colors">
                                 <MessageSquare className="h-4 w-4 text-emerald-500" />
-                                <span className="text-sm font-bold tracking-widest">+263 77 687 7873</span>
-                            </div>
+                                <span className="text-sm font-bold tracking-widest">+263 776 877 873</span>
+                            </a>
                         </div>
                     </div>
 
@@ -127,7 +127,7 @@ export function Footer() {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-white/10 flex justify-center">
                     <p className="text-sm text-muted-foreground font-medium text-center">
-                        © {currentYear} <span className="text-white">Gabriel Panashe Chandiwana</span>. All rights reserved.
+                        © {currentYear} <span className="text-white">Panashe M. Chandiwana</span>. All rights reserved.
                     </p>
                 </div>
             </div>

@@ -2,27 +2,27 @@ import type { Metadata } from "next";
 import { HomeContent } from "@/components/HomeContent";
 
 export const metadata: Metadata = {
-  title: "G. Panashe | Systems Engineering, AI & Full-Stack Development",
-  description: "Explore the portfolio of Gabriel Panashe, a Computer Engineering specialist building intelligent AI systems, SE-CDSS clinical decision support, secure architectures, and high-performance digital solutions. Zimbabwe & South Africa based.",
+  title: "Panashe M. Chandiwana | Computer Engineer and AI Developer",
+  description: "Portfolio of Panashe M. Chandiwana, a Zimbabwean Computer Engineering graduate, AI Engineer, and Software Developer building intelligent systems across healthcare, finance, enterprise technology, and industrial environments.",
   openGraph: {
-    title: "G. Panashe Chandiwana | Engineering with Purpose",
-    description: "Discover high-performance systems from autonomous AI agents to enterprise full-stack platforms. Professional engineering portfolio of Gabriel Panashe.",
-    url: "https://panashechandiwana.com",
+    title: "Panashe Chandiwana | AI Engineer and Software Developer",
+    description: "Computer Engineering graduate building AI, machine learning, backend, and full-stack systems for healthcare, finance, enterprise, and industrial applications.",
+    url: "https://panashechandiwana.vercel.app",
     type: "website",
-    siteName: "Gabriel Panashe Portfolio",
+    siteName: "Panashe Chandiwana Portfolio",
     images: [
       {
         url: "/profile_new.jpg",
         width: 1200,
         height: 630,
-        alt: "Gabriel Panashe - Computer Engineer & AI Developer Profile",
+        alt: "Panashe M. Chandiwana — Computer Engineering graduate and AI engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "G. Panashe Chandiwana | Engineering with Purpose",
-    description: "Discover high-performance systems from autonomous AI agents to enterprise full-stack platforms. Gabriel Panashe Portfolio.",
+    title: "Panashe Chandiwana | AI Engineer and Software Developer",
+    description: "Computer Engineering graduate building AI, machine learning, backend, and full-stack systems for healthcare, finance, enterprise, and industrial applications.",
     images: ["/profile_new.jpg"],
   },
 };

@@ -22,14 +22,14 @@ const contactMethods = [
     {
         icon: Linkedin,
         label: "LinkedIn",
-        value: "Gabriel Panashe",
+        value: "Panashe Chandiwana",
         href: "https://www.linkedin.com/in/panashe-chandiwana-a102672ba/",
         color: "primary"
     },
     {
         icon: MapPin,
         label: "Location",
-        value: "Harare, Zimbabwe",
+        value: "Highfield, Harare, Zimbabwe",
         href: null,
         color: "secondary"
     },
@@ -92,7 +92,7 @@ export function Contact() {
                         Let&apos;s <span className="text-[#A67B5B]">Connect.</span>
                     </motion.h2>
                     <motion.p variants={itemVariants} className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
-                        Have a project in mind or just want to say hi? I&apos;m always open to discussing new opportunities and technical challenges.
+                        I am open to graduate opportunities, AI engineering roles, software development projects, technical collaborations, and opportunities to build practical technology solutions.
                     </motion.p>
                 </motion.div>
 
