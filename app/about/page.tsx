@@ -4,7 +4,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export const metadata: Metadata = {
     title: "About Me | Panashe Chandiwana",
-    description: "Learn about Panashe M. Chandiwana's journey in Computer Engineering — education, professional experience, and passion for building intelligent systems in Zimbabwe.",
+    description: "Learn about Panashe M. Chandiwana's journey in Computer Engineering — education, professional experience, certifications and leadership across AI, automation, networking and IT infrastructure.",
     openGraph: {
         title: "About Me | Panashe Chandiwana",
         description: "A snapshot of my education, experience, and professional growth in the world of technology.",

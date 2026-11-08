@@ -85,14 +85,14 @@ export function Contact() {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
                         </span>
-                        Available for new projects
+                        Open to graduate opportunities
                     </motion.div>
 
                     <motion.h2 variants={itemVariants} className="text-5xl sm:text-7xl font-black tracking-tighter uppercase mb-6">
                         Let&apos;s <span className="text-[#A67B5B]">Connect.</span>
                     </motion.h2>
                     <motion.p variants={itemVariants} className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
-                        I am open to graduate opportunities, AI engineering roles, software development projects, technical collaborations, and opportunities to build practical technology solutions.
+                        I am open to graduate trainee programmes, AI and automation roles, network and infrastructure engineering roles, and technical collaborations.
                     </motion.p>
                 </motion.div>
 

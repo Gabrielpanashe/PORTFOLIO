@@ -13,33 +13,33 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   metadataBase: new URL("https://panashechandiwana.vercel.app"),
   title: {
-    default: "Panashe Chandiwana | AI Engineer and Software Developer",
+    default: "Panashe Chandiwana | Computer Engineering Graduate",
     template: "%s | Panashe Chandiwana",
   },
-  description: "Portfolio of Panashe M. Chandiwana, a Zimbabwean Computer Engineering graduate, AI Engineer, and Software Developer building intelligent systems across healthcare, finance, enterprise technology, and industrial environments.",
-  keywords: ["Panashe Chandiwana", "Panashe M. Chandiwana", "AI Engineer Zimbabwe", "Software Developer Zimbabwe", "Computer Engineer Zimbabwe", "Machine Learning Engineer Zimbabwe", "Full-Stack Developer Zimbabwe", "FastAPI Developer", "Next.js Developer", "Enterprise AI Engineer", "Artificial Intelligence Zimbabwe", "Healthcare AI Zimbabwe", "FinTech Developer Zimbabwe"],
+  description: "Portfolio of Panashe M. Chandiwana, a Zimbabwean First Class Computer Engineering graduate with experience in AI and automation, software development, network administration and IT infrastructure support.",
+  keywords: ["Panashe Chandiwana", "Panashe M. Chandiwana", "Computer Engineering Graduate Zimbabwe", "Network Engineer Zimbabwe", "IT Infrastructure Zimbabwe", "Systems Administrator Zimbabwe", "AI and Automation", "Machine Learning Zimbabwe", "Python Developer Zimbabwe", "CCNA", "Wireshark", "Zabbix", "Graduate Trainee"],
   authors: [{ name: "Panashe M. Chandiwana" }],
   creator: "Panashe M. Chandiwana",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://panashechandiwana.vercel.app",
-    title: "Panashe Chandiwana | AI Engineer and Software Developer",
-    description: "Computer Engineering graduate building AI, machine learning, backend, and full-stack systems for healthcare, finance, enterprise, and industrial applications.",
+    title: "Panashe Chandiwana | Computer Engineering Graduate",
+    description: "First Class Computer Engineering graduate in AI and automation, network engineering, and infrastructure and systems administration.",
     siteName: "Panashe Chandiwana Portfolio",
     images: [
       {
         url: "/profile_new.jpg",
         width: 1200,
         height: 630,
-        alt: "Panashe M. Chandiwana — Computer Engineering graduate and AI engineer",
+        alt: "Panashe M. Chandiwana — Computer Engineering graduate",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Panashe Chandiwana | AI Engineer and Software Developer",
-    description: "Computer Engineering graduate building AI, machine learning, backend, and full-stack systems for healthcare, finance, enterprise, and industrial applications.",
+    title: "Panashe Chandiwana | Computer Engineering Graduate",
+    description: "First Class Computer Engineering graduate in AI and automation, network engineering, and infrastructure and systems administration.",
     images: ["/profile_new.jpg"],
   },
   robots: {

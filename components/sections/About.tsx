@@ -8,32 +8,33 @@ const timeline = [
         type: "education",
         icon: GraduationCap,
         label: "Education",
-        title: "Bachelor of Science Honours Degree in Computer Engineering",
-        organization: "Chinhoyi University of Technology",
-        period: "August 2021 - June 2026",
-        description: "Completed a Bachelor of Science Honours Degree in Computer Engineering, with studies covering software engineering, artificial intelligence, machine learning, computer networks, databases, embedded systems, electronics, operating systems, computer architecture, cybersecurity, and engineering project development.",
+        title: "Bachelor of Engineering (Honours) in Computer Engineering",
+        organization: "Chinhoyi University of Technology (CUT), Zimbabwe",
+        period: "2021 - 2026",
+        description: "Graduated with a First Class (First Division) Honours degree in Computer Engineering.",
         achievements: [
-            "Status: Completed",
+            "Classification: First Class",
+            "GPA: 3.1 | Grade: A-"
         ]
     },
     {
         type: "education",
         icon: GraduationCap,
         label: "Education",
-        title: "Advanced Level",
-        organization: "Warren Park High School",
-        period: "2020 - 2021",
-        description: "Completed Advanced Level studies in Harare, Zimbabwe.",
+        title: "Advanced Level (A Level)",
+        organization: "Warren Park High School, Harare",
+        period: "2019 - 2020",
+        description: "Completed Advanced Level studies with 3 A Level passes: Mathematics, Physics and Geography.",
         achievements: []
     },
     {
         type: "education",
         icon: GraduationCap,
         label: "Education",
-        title: "Ordinary Level",
-        organization: "Warren Park High School",
+        title: "Ordinary Level (O Level)",
+        organization: "Warren Park High School, Harare",
         period: "2015 - 2018",
-        description: "Completed Ordinary Level studies in Harare, Zimbabwe.",
+        description: "Completed Ordinary Level studies with 9 O Level passes, including Mathematics, Physics and English.",
         achievements: []
     },
     {
@@ -41,33 +42,14 @@ const timeline = [
         icon: Briefcase,
         label: "Experience",
         title: "IT Intern",
-        organization: "Info-Product Technologies",
+        organization: "Info-Product Technologies, Harare",
         period: "October 2024 - May 2025",
-        description: "Supported the administration, maintenance, and troubleshooting of organisational IT infrastructure across hardware, software, networking, monitoring, and user-support environments.",
+        description: "Supported IT infrastructure administration and the troubleshooting of technical systems, developing practical experience in problem-solving, systems monitoring and resolving operational IT challenges.",
         achievements: [
-            "Administered network infrastructure, including switch configuration, cable management, wireless connectivity, and access-control support.",
-            "Provided technical support to staff by diagnosing and resolving hardware, software, printer, operating-system, and network-connectivity issues.",
-            "Installed and configured operating systems, software applications, device drivers, and user workstations.",
-            "Assisted with computer hardware troubleshooting, maintenance, upgrades, and repairs.",
-            "Monitored network activity and investigated performance or connectivity anomalies using Wireshark.",
-            "Supported infrastructure and service monitoring using Zabbix.",
-            "Assisted with IT operations across a multi-site working environment.",
-            "Maintained clear communication with users while resolving technical incidents."
-        ]
-    },
-    {
-        type: "experience",
-        icon: Briefcase,
-        label: "Experience",
-        title: "General Hand",
-        organization: "Zimbabwe Leaf Tobacco",
-        period: "2024",
-        description: "Supported daily production and operational activities within a large-scale tobacco-processing environment.",
-        achievements: [
-            "Assisted with general production and operational duties.",
-            "Followed workplace health, safety, and operational procedures.",
-            "Worked effectively as part of a team in a physically demanding environment.",
-            "Supported the completion of routine production tasks."
+            "Provided technical support and diagnosed hardware, software and network connectivity problems, supporting reliable IT operations.",
+            "Monitored network and system performance using Wireshark and Zabbix to investigate network anomalies, performance issues and potential security concerns.",
+            "Assisted with software configuration, access-control administration and maintenance of technical records.",
+            "Supported IT infrastructure administration and troubleshooting of technical systems."
         ]
     },
     {
@@ -75,49 +57,45 @@ const timeline = [
         icon: Briefcase,
         label: "Experience",
         title: "Data Capturer / Warehouse Assistant",
-        organization: "BAK Logistics",
+        organization: "BAK Logistics, Harare",
         period: "2021",
-        description: "Supported logistics, data-management, inventory-control, and warehouse operations for Unilever product distribution.",
+        description: "Supported logistics and inventory data management for Unilever product distribution.",
         achievements: [
-            "Captured, verified, and maintained logistics and inventory records.",
-            "Supported product receiving, storage, organisation, and dispatch.",
-            "Assisted with stock tracking and warehouse documentation.",
-            "Worked in a high-volume environment requiring accuracy, teamwork, and time management."
+            "Captured, verified and managed logistics and inventory data for Unilever product distribution.",
+            "Maintained warehouse organisation and supported daily operations in a high-volume distribution environment."
         ]
     },
     {
         type: "certification",
         icon: Award,
-        label: "Certification & Professional Development",
+        label: "Certification",
         title: "GCI Introduction to AI and Data Science",
         organization: "Matsuo-Iwasawa Laboratory, University of Tokyo",
-        period: "May 2026 - September 2026",
-        description: "Participating in the GCI Introduction to AI and Data Science programme, covering foundational and applied concepts in artificial intelligence, machine learning, data analysis, and practical problem-solving.",
+        period: "2026",
+        description: "Completed the GCI Introduction to AI and Data Science programme.",
+        achievements: []
+    },
+    {
+        type: "certification",
+        icon: Award,
+        label: "Certification",
+        title: "Cisco Certified Network Associate (CCNA)",
+        organization: "Cisco",
+        period: "In Progress",
+        description: "Currently working towards the CCNA certification in networking fundamentals.",
         achievements: [
             "Status: In Progress"
         ]
     },
     {
-        type: "certification",
+        type: "award",
         icon: Award,
-        label: "Certification & Professional Development",
-        title: "Zimbabwe Centre of Excellence for Enterprise AI Engineering",
-        organization: "ISB Optimus — Founding Wave 1 Cohort",
-        period: "2026 - Present",
-        description: "Selected as a founding member of the Wave 1 Cohort of the Zimbabwe Centre of Excellence for enterprise AI engineering, delivered by ISB Optimus. A selective training and professional-development programme, not full-time employment.",
-        achievements: [
-            "Enterprise AI engineering",
-            "Agentic AI systems",
-            "AI process engineering",
-            "Claude AI and Claude Code",
-            "Agent Skills and tool integration",
-            "Workflow automation",
-            "Responsible AI",
-            "Enterprise system integration",
-            "Technical consulting",
-            "AI solution architecture fundamentals",
-            "Status: In Progress"
-        ]
+        label: "Award",
+        title: "2026 Cimas Healthathon 3.0 Champions: Team Lead",
+        organization: "Cimas Healthathon 3.0",
+        period: "2026",
+        description: "Led a team of three to first position with SilicaGuard, an AI-assisted lung health screening and referral platform for artisanal miners.",
+        achievements: []
     },
     {
         type: "membership",
@@ -126,17 +104,17 @@ const timeline = [
         title: "Member",
         organization: "Computer Society of Zimbabwe",
         period: "January 2026 - Present",
-        description: "Member of Zimbabwe's professional community for computing, information technology, and digital innovation.",
+        description: "Member of Zimbabwe's professional community for computing and information technology.",
         achievements: []
     },
     {
         type: "membership",
         icon: Users,
         label: "Membership & Leadership",
-        title: "Student Representative Assembly Member",
+        title: "Student Representative Assembly",
         organization: "School of Engineering, Chinhoyi University of Technology",
         period: "2024",
-        description: "Represented student interests and contributed to communication between engineering students and institutional leadership.",
+        description: "Served on the Student Representative Assembly for the School of Engineering.",
         achievements: []
     },
     {
@@ -146,7 +124,7 @@ const timeline = [
         title: "Secretary General",
         organization: "Methodist Church on Campus",
         period: "2025 - 2026",
-        description: "Supported organisational administration, communication, meeting coordination, record keeping, and leadership activities.",
+        description: "Served as Secretary General of the Methodist Church on Campus.",
         achievements: []
     }
 ];
@@ -163,7 +141,7 @@ export function About() {
                     transition={{ duration: 0.6 }}
                     className="max-w-3xl mx-auto text-center text-lg text-muted-foreground leading-relaxed mb-4"
                 >
-                    Computer Engineering graduate with experience in software engineering, artificial intelligence, machine learning, backend development, enterprise systems integration, networking, and IT support. I build scalable intelligent systems using Python, FastAPI, Next.js, PostgreSQL, Docker, and modern AI technologies.
+                    Computer Engineering graduate with a First Class Honours degree and practical experience in network administration, IT infrastructure support, systems monitoring, software development, database management and artificial intelligence. I combine Python, machine learning and automation skills with hands-on knowledge of TCP/IP, switch configuration, Linux, Wireshark and Zabbix to build and maintain reliable, data-driven technical systems.
                 </motion.p>
 
                 {/* Timeline */}

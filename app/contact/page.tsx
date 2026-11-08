@@ -4,7 +4,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export const metadata: Metadata = {
     title: "Contact | Panashe Chandiwana",
-    description: "Contact Panashe M. Chandiwana for graduate opportunities, AI engineering roles, or software development collaborations. Email, GitHub, LinkedIn, and WhatsApp available.",
+    description: "Contact Panashe M. Chandiwana for graduate trainee opportunities, AI and automation roles, or network and infrastructure engineering roles. Email, GitHub, LinkedIn, and WhatsApp available.",
     openGraph: {
         title: "Contact | Panashe Chandiwana",
         description: "Have a question or want to work together? Reach out via email, LinkedIn, or WhatsApp.",
@@ -18,7 +18,7 @@ export default function ContactPage() {
             <SectionHeader
                 title="Get in"
                 gradientText="Touch"
-                subtitle="Open to graduate opportunities, AI engineering roles, and software development collaborations."
+                subtitle="Open to graduate trainee programmes, AI and automation roles, and network and infrastructure engineering roles."
                 accentColor="brown"
             />
             <Contact />

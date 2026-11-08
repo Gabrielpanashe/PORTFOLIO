@@ -5,120 +5,79 @@ import {
     Brain,
     Code,
     Database,
-    Cloud,
-    Cpu,
-    Globe,
     Terminal,
-    Laptop,
-    Layers,
     Sparkles,
-    Network
+    Network,
+    Users
 } from "lucide-react";
 
 const skillCategories = [
     {
-        title: "Programming Languages",
-        icon: Code,
-        skills: ["Python", "Java", "C", "JavaScript", "TypeScript", "SQL", "PHP", "Rust"],
-        theme: "primary"
-    },
-    {
-        title: "Artificial Intelligence & Machine Learning",
+        title: "Artificial Intelligence & Data Science",
         icon: Brain,
         skills: [
             "Machine Learning",
+            "Natural Language Processing (NLP)",
             "Deep Learning",
-            "Natural Language Processing",
-            "Computer Vision",
-            "Large Language Models",
-            "Retrieval-Augmented Generation",
+            "Large Language Models (LLMs)",
             "Prompt Engineering",
-            "Explainable AI",
-            "Predictive Analytics",
-            "Classification",
-            "Feature Engineering",
-            "Sentiment Analysis",
-            "Anomaly Detection",
-            "Recommendation Systems",
-            "Model Evaluation"
-        ],
-        theme: "secondary"
-    },
-    {
-        title: "AI & Machine Learning Libraries",
-        icon: Layers,
-        skills: ["TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "NumPy", "SHAP", "LightGBM", "CatBoost", "LangChain", "Transformers"],
-        theme: "muted"
-    },
-    {
-        title: "Enterprise AI & Agentic Systems",
-        icon: Sparkles,
-        skills: [
-            "Enterprise AI Engineering",
-            "Agentic AI Systems",
-            "AI Workflow Automation",
-            "Claude AI",
-            "Claude Code",
-            "Agent Skills",
-            "Tool Integration",
-            "Prompt and Context Design",
-            "Responsible AI",
-            "AI-Assisted Process Engineering"
+            "LangChain",
+            "Vector Databases (ChromaDB)",
+            "AI-Assisted Application Development"
         ],
         theme: "primary"
     },
     {
-        title: "Backend Development",
-        icon: Terminal,
-        skills: ["FastAPI", "Flask", "REST API Development", "Authentication", "Role-Based Access Control", "API Integration", "Data Validation", "Backend Architecture"],
+        title: "Programming & Software Development",
+        icon: Code,
+        skills: ["Python", "JavaScript", "C", "FastAPI", "Flask", "RESTful API Development"],
         theme: "secondary"
     },
     {
-        title: "Frontend Development",
-        icon: Globe,
-        skills: ["React", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS", "Responsive Web Development", "Progressive Web Applications"],
-        theme: "muted"
-    },
-    {
-        title: "Databases & Data Technologies",
+        title: "Databases & Data Management",
         icon: Database,
-        skills: ["PostgreSQL", "MySQL", "SQLite", "Redis", "DuckDB", "Firebase", "Supabase", "Prisma", "Chroma", "Vector Databases"],
+        skills: [
+            "PostgreSQL",
+            "MySQL",
+            "SQLite",
+            "Firebase",
+            "SQL",
+            "Relational Database Design",
+            "Data Capturing",
+            "Data Validation",
+            "Data Management"
+        ],
+        theme: "muted"
+    },
+    {
+        title: "Automation & Productivity",
+        icon: Sparkles,
+        skills: ["Power Automate", "Microsoft Excel", "Microsoft PowerPoint", "Microsoft Word", "Outlook", "SharePoint", "OneDrive"],
         theme: "primary"
     },
     {
-        title: "DevOps & Deployment",
-        icon: Cloud,
-        skills: ["Docker", "Git", "GitHub", "Vercel", "Linux", "Google Colab", "Postman", "Environment Configuration", "Containerisation"],
-        theme: "secondary"
-    },
-    {
-        title: "Networking & IT Infrastructure",
+        title: "Network & Infrastructure",
         icon: Network,
         skills: [
             "Network Administration",
-            "Switch Configuration",
             "TCP/IP",
-            "Wi-Fi Troubleshooting",
-            "Network Monitoring",
-            "Wireshark",
-            "Zabbix",
-            "Hardware Troubleshooting",
-            "Operating-System Installation",
-            "IT Support"
+            "Switch Configuration",
+            "Network Monitoring & Troubleshooting",
+            "Infrastructure & IT Support"
         ],
+        theme: "secondary"
+    },
+    {
+        title: "Monitoring & Systems Tools",
+        icon: Terminal,
+        skills: ["Wireshark", "Zabbix", "Linux", "Postman", "Git", "GitHub", "Docker"],
         theme: "muted"
     },
     {
-        title: "Embedded & Industrial Technologies",
-        icon: Cpu,
-        skills: ["Raspberry Pi", "OBD-II", "CAN Bus", "Embedded Systems", "Edge Computing", "Predictive Maintenance"],
+        title: "Behavioural Competencies",
+        icon: Users,
+        skills: ["Communication", "Teamwork", "Attention to Detail", "Honesty", "Time Management", "Leadership"],
         theme: "primary"
-    },
-    {
-        title: "Development Tools",
-        icon: Laptop,
-        skills: ["Visual Studio Code", "Jupyter Notebook", "Google Colab", "GitHub", "Postman", "Docker", "XAMPP"],
-        theme: "secondary"
     }
 ];
 

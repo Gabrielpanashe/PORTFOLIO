@@ -46,11 +46,11 @@ export function Footer() {
                             </div>
                             <div className="flex flex-col leading-none">
                                 <span className="text-xl font-black tracking-tighter text-white uppercase">PANASHE</span>
-                                <span className="text-xs font-bold tracking-[0.2em] text-[#A67B5B]/80 uppercase mt-1">AI Engineer</span>
+                                <span className="text-xs font-bold tracking-[0.2em] text-[#A67B5B]/80 uppercase mt-1">Computer Engineer</span>
                             </div>
                         </Link>
                         <p className="text-base text-muted-foreground leading-relaxed mb-6">
-                            Building intelligent systems for real-world impact.
+                            AI, automation and network infrastructure for reliable, real-world systems.
                         </p>
                         <div className="flex flex-col gap-3">
                             <div className="flex items-center gap-3 text-muted-foreground">

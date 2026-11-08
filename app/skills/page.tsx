@@ -4,7 +4,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export const metadata: Metadata = {
     title: "Technical Expertise | Panashe Chandiwana",
-    description: "The technical toolkit of Panashe M. Chandiwana — AI and machine learning, backend and full-stack development, databases, DevOps, and networking.",
+    description: "The technical toolkit of Panashe M. Chandiwana — AI and machine learning, Python and backend development, databases, automation, network administration and systems monitoring.",
     openGraph: {
         title: "Technical Expertise | Panashe Chandiwana",
         description: "Exploring my technical toolkit and the technologies I use to bring ideas to life.",

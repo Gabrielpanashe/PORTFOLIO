@@ -8,13 +8,11 @@ import { useState, useEffect } from "react";
 import { Github, Linkedin, Mail, ArrowRight, Download, MessageSquare, MapPin } from "lucide-react";
 
 const rotatingRoles = [
-    "AI Engineer",
-    "Software Developer",
-    "Machine Learning Engineer",
-    "Full-Stack Developer",
-    "Backend Developer",
-    "Computer Engineer",
-    "Enterprise AI Engineer",
+    "Computer Engineering Graduate",
+    "AI & Automation",
+    "Network Engineering",
+    "Infrastructure & Systems Admin",
+    "Python & Backend Development",
 ];
 
 export function Hero() {
@@ -80,7 +78,7 @@ export function Hero() {
                             {/* Floating Card Info */}
                             <div className="absolute bottom-8 left-8 right-8 z-20 backdrop-blur-md bg-white/10 border border-white/10 p-5 rounded-2xl transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">
                                 <p className="text-white text-xl font-black uppercase tracking-tight">Panashe M. Chandiwana</p>
-                                <p className="text-primary font-bold text-[10px] tracking-[0.2em] uppercase mt-1">Computer Engineering Graduate | Software Developer | AI Engineer</p>
+                                <p className="text-primary font-bold text-[10px] tracking-[0.2em] uppercase mt-1">Computer Engineering Graduate | AI &amp; Automation | Network &amp; Infrastructure</p>
                             </div>
                         </div>
 
@@ -123,8 +121,8 @@ export function Hero() {
                             variants={itemVariants}
                             className="text-lg sm:text-xl text-muted-foreground font-medium mb-10 max-w-xl mx-auto leading-relaxed text-center"
                         >
-                            I build <span className="text-white font-bold underline decoration-primary/40 underline-offset-4">intelligent, scalable</span>, and
-                            user-focused software systems that solve real-world challenges across healthcare, finance, enterprise technology, and industrial environments.
+                            First Class Computer Engineering graduate combining <span className="text-white font-bold underline decoration-primary/40 underline-offset-4">AI, automation and software development</span> with
+                            hands-on network administration, systems monitoring and IT infrastructure support.
                         </motion.p>
 
                         {/* CTA Buttons - Mobile focused layout */}
