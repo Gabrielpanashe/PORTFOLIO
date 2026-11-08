@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | Panashe Chandiwana",
   },
   description: "Portfolio of Panashe M. Chandiwana, a Zimbabwean First Class Computer Engineering graduate with experience in AI and automation, software development, network administration and IT infrastructure support.",
-  keywords: ["Panashe Chandiwana", "Panashe M. Chandiwana", "Computer Engineering Graduate Zimbabwe", "Network Engineer Zimbabwe", "IT Infrastructure Zimbabwe", "Systems Administrator Zimbabwe", "AI and Automation", "Machine Learning Zimbabwe", "Python Developer Zimbabwe", "CCNA", "Wireshark", "Zabbix", "Graduate Trainee"],
+  keywords: ["Panashe Chandiwana", "Panashe M. Chandiwana", "Computer Engineering Graduate Zimbabwe", "Network Engineer Zimbabwe", "IT Infrastructure Zimbabwe", "Systems Administrator Zimbabwe", "IT Support Zimbabwe", "AI and Automation", "Machine Learning Zimbabwe", "Python Developer Zimbabwe", "CCNA", "Wireshark", "Zabbix", "Graduate Trainee"],
   authors: [{ name: "Panashe M. Chandiwana" }],
   creator: "Panashe M. Chandiwana",
   openGraph: {

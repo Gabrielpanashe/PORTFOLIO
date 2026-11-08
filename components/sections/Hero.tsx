@@ -8,11 +8,10 @@ import { useState, useEffect } from "react";
 import { Github, Linkedin, Mail, ArrowRight, Download, MessageSquare, MapPin } from "lucide-react";
 
 const rotatingRoles = [
-    "Computer Engineering Graduate",
+    "Network Engineer",
     "AI & Automation",
-    "Network Engineering",
-    "Infrastructure & Systems Admin",
-    "Python & Backend Development",
+    "Systems Administrator",
+    "IT Support",
 ];
 
 export function Hero() {
@@ -78,7 +77,7 @@ export function Hero() {
                             {/* Floating Card Info */}
                             <div className="absolute bottom-8 left-8 right-8 z-20 backdrop-blur-md bg-white/10 border border-white/10 p-5 rounded-2xl transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">
                                 <p className="text-white text-xl font-black uppercase tracking-tight">Panashe M. Chandiwana</p>
-                                <p className="text-primary font-bold text-[10px] tracking-[0.2em] uppercase mt-1">Computer Engineering Graduate | AI &amp; Automation | Network &amp; Infrastructure</p>
+                                <p className="text-primary font-bold text-[10px] tracking-[0.2em] uppercase mt-1">Network Engineer | AI &amp; Automation | Systems Admin | IT Support</p>
                             </div>
                         </div>
 

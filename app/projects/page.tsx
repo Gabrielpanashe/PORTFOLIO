@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     description: "Explore systems built by Panashe M. Chandiwana — SilicaGuard, the first-position Cimas Healthathon 3.0 platform, and the SE-CDSS clinical decision support dissertation.",
     openGraph: {
         title: "Featured Projects | Panashe Chandiwana",
-        description: "A deep dive into AI-powered systems and full-stack platforms, including SilicaGuard and SE-CDSS.",
+        description: "A deep dive into AI-assisted platforms and integrated systems, including SilicaGuard and SE-CDSS.",
         url: "https://panashechandiwana.vercel.app/projects",
     },
 };
